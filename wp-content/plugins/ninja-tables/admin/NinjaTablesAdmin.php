@@ -1659,6 +1659,7 @@ class NinjaTablesAdmin
 
     public function updateButtonSettings()
     {
+        ninja_tables_allowed_css_properties();
         $tableId = absint($_REQUEST['table_id']);
         $buttonSettings = wp_unslash(ninja_tables_sanitize_array($_REQUEST['button_settings']));
         update_post_meta($tableId, '_ninja_custom_table_buttons', $buttonSettings);
@@ -1740,7 +1741,7 @@ class NinjaTablesAdmin
         $plugin = [
             'name'      => 'Ninja Charts',
             'repo-slug' => 'ninja-charts',
-            'file'      => 'ninja-charts.php',
+            'file'      => 'plugin.php',
             'redirect'  => self_admin_url('admin.php?page=ninja-charts#/chart-list')
         ];
 
@@ -1750,14 +1751,5 @@ class NinjaTablesAdmin
             'message'  => 'Successfully enabled Ninja Charts.',
             'redirect' => $plugin['redirect']
         ));
-    }
-
-    public function pluginUpdateActions($upgrader_object, $options)
-    {
-        if ($options['action'] == 'update' && $options['type'] === 'plugin') {
-            if (in_array(NINJA_TABLES_BASENAME, $options['plugins'])) {
-                do_action('ninja_table_check_db_integrity');
-            }
-        }
     }
 }

@@ -262,7 +262,7 @@ class NinjaTableBuilder
             "has_pro" => false,
             "value"   => $value,
             "style"   => [
-                "fontSize"   => '',
+                "fontSize"   => 10,
                 "color"      => '',
                 "alignment"  => 'center',
                 "margin"     => $default_margin_padding,
@@ -277,7 +277,7 @@ class NinjaTableBuilder
         return [
             'trId'            => rand(1000000, 9999999),
             'backgroundColor' => '',
-            'rowHeight'       => ''
+            'rowHeight'       => 50
         ];
     }
 
@@ -306,7 +306,7 @@ class NinjaTableBuilder
         return [
             'tdId'              => rand(10000000, 99999999),
             'backgroundColor'   => '',
-            'columnWidth'       => '',
+            'columnWidth'       => 150,
             'emptyCell'         => '',
             'verticalAlignment' => '',
             'rowspan'           => 1,

@@ -65,7 +65,7 @@ return [
                 "type"  => "slider",
                 "value" => 500,
                 "min"   => 100,
-                "max"   => 2000,
+                "max"   => 10000,
             ],
         ],
     ],

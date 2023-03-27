@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - CookieYes | GDPR Cookie Consent &amp; Compliance Notice (CCPA Ready) - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-11-28 11:50:15+0000\n"
+"PO-Revision-Date: 2023-01-02 11:57:29+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,39 @@ msgstr ""
 "X-Generator: GlotPress/4.0.0-alpha.3\n"
 "Language: es\n"
 "Project-Id-Version: Plugins - CookieYes | GDPR Cookie Consent &amp; Compliance Notice (CCPA Ready) - Stable (latest release)\n"
+
+#. translators: %s: Migration notice expiry notice.
+#: lite/admin/modules/upgrade/class-upgrade.php:531
+msgid "Not satisfied with the New UI and related changes? You can switch back to the old UI at any time until %s."
+msgstr "¿No te satisface la nueva interfaz y sus cambios? Puedes volver a la vieja interfaz en cualquier momento hasta el %s."
+
+#: legacy/includes/class-cookie-law-info.php:985
+msgid "Start Migration"
+msgstr "Iniciar la migración"
+
+#: legacy/includes/class-cookie-law-info.php:982
+msgid "Get access to additional free features such as cookie scan, consent log, etc. by connecting to the CookieYes web app (Optional)"
+msgstr "Consigue acceso a características gratuitas adicionales como exploración de cookies, registro de consentimientos, etc., conectando con la aplicación web de CookieYes (opcional)"
+
+#: legacy/includes/class-cookie-law-info.php:981
+msgid "Use the live preview feature to customize your banner while you are looking at it."
+msgstr "Usa la característica de vista previa en directo para personalizar tu banner mientras lo estás viendo."
+
+#: legacy/includes/class-cookie-law-info.php:980
+msgid "Access new free features (set consent expiration period, enable/disable prior consent, show/hide categories on the banner, light/dark/custom color scheme, privacy policy generator, etc.)"
+msgstr "Accede a nuevas características gratuitas (configurar periodo de caducidad del consentimiento, activar/desactivar consentimiento previo, mostrar/ocultar categorías en el banner, esquema de color claro/oscuro/personalizado, generador de política de privacidad, etc.)"
+
+#: legacy/includes/class-cookie-law-info.php:979
+msgid "Display the new cookie consent banner (compliant with the WCAG guidelines) on your website"
+msgstr "Muestra el nuevo banner de consentimiento de cookies (que cumple con las directrices de WCAG) en tu web"
+
+#: legacy/includes/class-cookie-law-info.php:977
+msgid "By migrating to the new and improved user interface, you can:"
+msgstr "Al migrar a la nueva y mejorada interfaz de usuario puedes:"
+
+#: legacy/includes/class-cookie-law-info.php:976
+msgid "Migrate to the new UI for an enhanced experience and advanced features"
+msgstr "Migra a la nueva interfaz de usuario para obtener una experiencia mejorada y características avanzadas"
 
 #: lite/admin/modules/uninstall-feedback/class-uninstall-feedback.php:209
 msgid "Quick Feedback"
@@ -47,7 +80,7 @@ msgstr "Advertencia: Restablece todos tus ajustes actuales a los por defecto. Es
 msgid "Are you sure you want to delete all your settings and switch to the new interface?"
 msgstr "¿Seguro que quieres borrar todos tus ajustes y cambiar a la nueva interfaz?"
 
-#: uninstall.php:69
+#: uninstall.php:70
 msgid "Failed to delete CookieYes plugin data!"
 msgstr "¡Ha fallado el borrado de los datos del plugin CookieYes!"
 
@@ -97,19 +130,19 @@ msgstr "La configuración es demasiado difícil / Falta documentación"
 msgid "Sorry, you are not allowed to create resources."
 msgstr "Lo siento, no tienes permisos para crear recursos."
 
-#: lite/admin/modules/settings/includes/class-controller.php:427
+#: lite/admin/modules/settings/includes/class-controller.php:444
 msgid "Failed to the update the data to web app"
 msgstr "Ha fallado la actualización de los datos en la aplicación web"
 
-#: lite/admin/modules/settings/includes/class-controller.php:398
+#: lite/admin/modules/settings/includes/class-controller.php:415
 msgid "Failed to fetch data from the API"
 msgstr "Ha fallado la recuperación de datos desde la API"
 
-#: lite/admin/modules/settings/includes/class-controller.php:334
+#: lite/admin/modules/settings/includes/class-controller.php:335
 msgid "Invalid Website ID"
 msgstr "ID de web no válido"
 
-#: lite/admin/modules/settings/includes/class-controller.php:263
+#: lite/admin/modules/settings/includes/class-controller.php:264
 msgid "Free Plan"
 msgstr "Plan gratuito"
 
@@ -447,22 +480,22 @@ msgstr "ID no válido."
 msgid "Unique identifier for the resource."
 msgstr "Identificador único del recurso."
 
-#: lite/admin/class-admin.php:404 lite/admin/class-admin.php:405
+#: lite/admin/class-admin.php:409 lite/admin/class-admin.php:410
 msgid "CookieYes Setup Wizard"
 msgstr "Asistente de configuración de CookieYes"
 
-#: lite/admin/class-admin.php:396 lite/admin/class-admin.php:397
+#: lite/admin/class-admin.php:401 lite/admin/class-admin.php:402
 #: lite/admin/dist/js/app.js:1
 msgid "Site Settings"
 msgstr "Ajustes del sitio"
 
-#: lite/admin/class-admin.php:386 lite/admin/class-admin.php:387
+#: lite/admin/class-admin.php:391 lite/admin/class-admin.php:392
 #: lite/admin/dist/js/app.js:1
 msgid "Dashboard"
 msgstr "Escritorio"
 
 #. Author of the plugin
-#: lite/admin/class-admin.php:376 lite/admin/class-admin.php:377
+#: lite/admin/class-admin.php:381 lite/admin/class-admin.php:382
 msgid "CookieYes"
 msgstr "CookieYes"
 
@@ -712,7 +745,7 @@ msgid "Premium"
 msgstr "Premium"
 
 #: legacy/admin/views/admin-settings-upgrade-pro.php:13
-#: lite/admin/modules/settings/includes/class-controller.php:262
+#: lite/admin/modules/settings/includes/class-controller.php:263
 msgid "Free"
 msgstr "Gratis"
 
@@ -1654,7 +1687,7 @@ msgstr "Recuérdamelo más tarde"
 msgid "Hey, we at %1$sWebToffee%2$s would like to thank you for using our plugin. We would really appreciate if you could take a moment to drop a quick review that will inspire us to keep going."
 msgstr "Hola, en %1$sWebToffee%2$s nos gustaría agradecerte que uses nuestro plugin. Apreciaríamos mucho si te tomas un momento y nos dejas una valoración rápida que nos inspire a seguir adelante."
 
-#: cookie-law-info.php:88
+#: cookie-law-info.php:98
 msgid "Please make sure the cache is cleared after each plugin update especially if you have minified JS and/or CSS files."
 msgstr "Por favor, asegúrate de que la caché esté vacía después de actualizar cada plugin, especialmente si has minimizado archivos JS y/o CSS."
 
@@ -1728,6 +1761,7 @@ msgid "The shortcode will be represented as a link whereever used."
 msgstr "El shortcode será representado como un enlace dondequiera que se utilice."
 
 #: legacy/admin/views/admin-settings-buttons.php:353
+#: lite/admin/dist/js/app.js:1
 msgid "Checkbox"
 msgstr "Casilla de verificación"
 
@@ -1779,11 +1813,11 @@ msgstr "Confirmar"
 msgid "Do you really wish to opt out?"
 msgstr "¿Realmente quieres rechazar?"
 
-#: legacy/public/modules/shortcode/shortcode.php:523
+#: legacy/public/modules/shortcode/shortcode.php:514
 msgid "Close and Accept"
 msgstr "Cerrar y aceptar"
 
-#: legacy/public/modules/shortcode/shortcode.php:523
+#: legacy/public/modules/shortcode/shortcode.php:514
 msgid "Close the cookie bar"
 msgstr "Cerrar la barra de cookies"
 
@@ -1813,6 +1847,7 @@ msgstr "Mostrar más"
 #: legacy/admin/modules/cookies/cookies.php:628
 #: legacy/admin/modules/cookies/views/non-necessary-settings.php:41
 #: legacy/public/views/cookie-law-info_popup_content.php:7
+#: lite/admin/dist/js/chunk-7c350c38.js:1
 msgid "Disabled"
 msgstr "Desactivado"
 
@@ -1934,23 +1969,23 @@ msgstr "Tipo de cookie"
 msgid "Privacy Overview"
 msgstr "Resumen de privacidad"
 
-#: legacy/public/modules/shortcode/shortcode.php:109
+#: legacy/public/modules/shortcode/shortcode.php:100
 msgid "Manage your consent."
 msgstr "Gestiona tu consentimiento."
 
-#: legacy/public/modules/shortcode/shortcode.php:107
+#: legacy/public/modules/shortcode/shortcode.php:98
 msgid "No consent given."
 msgstr "No se ha dado el consentimiento."
 
-#: legacy/public/modules/shortcode/shortcode.php:103
+#: legacy/public/modules/shortcode/shortcode.php:94
 msgid "Consent rejected."
 msgstr "Consentimiento rechazado."
 
-#: legacy/public/modules/shortcode/shortcode.php:101
+#: legacy/public/modules/shortcode/shortcode.php:92
 msgid "Consent accepted."
 msgstr "Consentimiento aceptado. "
 
-#: legacy/public/modules/shortcode/shortcode.php:98
+#: legacy/public/modules/shortcode/shortcode.php:89
 msgid "Your current state:"
 msgstr "Tu estado actual:"
 
@@ -2116,7 +2151,7 @@ msgstr "Página"
 msgid "URL or Page?"
 msgstr "¿URL o página?"
 
-#: legacy/public/modules/shortcode/shortcode.php:144
+#: legacy/public/modules/shortcode/shortcode.php:135
 msgid "Delete Cookies"
 msgstr "Borrar las cookies"
 
@@ -2357,7 +2392,7 @@ msgid "Settings updated."
 msgstr "Ajustes actualizados."
 
 #: legacy/admin/class-cookie-law-info-admin.php:265
-#: lite/admin/class-admin.php:611 lite/admin/dist/js/app.js:1
+#: lite/admin/class-admin.php:616 lite/admin/dist/js/app.js:1
 msgid "Support"
 msgstr "Soporte"
 
@@ -2383,25 +2418,25 @@ msgstr "GDPR Cookie Consent"
 #: legacy/admin/modules/cookies/views/necessary-settings.php:41
 #: legacy/admin/modules/cookies/views/non-necessary-settings.php:55
 #: legacy/public/modules/script-blocker/views/settings.php:165
-#: legacy/public/modules/shortcode/shortcode.php:248
+#: legacy/public/modules/shortcode/shortcode.php:239
 #: lite/admin/dist/js/chunk-1f928744.js:1
 msgid "Description"
 msgstr "Descripción"
 
 #: legacy/admin/modules/cookie-scaner/views/scan-results.php:71
 #: legacy/admin/modules/cookies/cookies.php:251
-#: legacy/public/modules/shortcode/shortcode.php:245
+#: legacy/public/modules/shortcode/shortcode.php:236
 #: lite/admin/dist/js/chunk-1f928744.js:1
 msgid "Duration"
 msgstr "Duración"
 
 #: legacy/admin/modules/cookies/cookies.php:249
-#: legacy/public/modules/shortcode/shortcode.php:242
+#: legacy/public/modules/shortcode/shortcode.php:233
 msgid "Type"
 msgstr "Tipo"
 
 #: legacy/admin/modules/cookies/cookies.php:121
-#: legacy/public/modules/shortcode/shortcode.php:239
+#: legacy/public/modules/shortcode/shortcode.php:230
 #: lite/admin/dist/js/chunk-1f928744.js:1
 msgid "Cookie"
 msgstr "Cookie"
@@ -2634,7 +2669,7 @@ msgstr "Cabecera"
 #: legacy/admin/class-cookie-law-info-admin.php:189
 #: legacy/admin/class-cookie-law-info-admin.php:264
 #: legacy/admin/partials/cookie-law-info-admin_settings.php:31
-#: lite/admin/class-admin.php:612
+#: lite/admin/class-admin.php:617
 msgid "Settings"
 msgstr "Ajustes"
 

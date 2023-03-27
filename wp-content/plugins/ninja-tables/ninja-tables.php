@@ -16,9 +16,9 @@
  * Plugin Name:       Ninja Tables
  * Plugin URI:        https://wpmanageninja.com/downloads/ninja-tables-pro-add-on/
  * Description:       The Easiest & Fastest Responsive Table Plugin on WordPress. Multiple templates, drag-&-drop live table builder, multiple color scheme, and styles.
- * Version:           4.3.2
+ * Version:           4.3.4
  * Author:            WPManageNinja LLC
- * Author URI:        https://wpmanageninja.com/
+ * Author URI:        https://ninjatables.com/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       ninja-tables
@@ -34,7 +34,7 @@ define('NINJA_TABLES_BASENAME', plugin_basename(__FILE__));
 define('NINJA_TABLES_DIR_URL', plugin_dir_url(__FILE__));
 define('NINJA_TABLES_DIR_PATH', plugin_dir_path(__FILE__));
 define('NINJA_TABLES_PUBLIC_DIR_URL', NINJA_TABLES_DIR_URL . 'public/');
-define('NINJA_TABLES_VERSION', '4.3.2');
+define('NINJA_TABLES_VERSION', '4.3.4');
 define('NINJA_TABLES_ASSET_VERSION', '3.1.0');
 define('NINJA_TABLES_PRELOAD_FONT_VERSION', "1a82860cb5286f7833a2c33fbdd1d76c");
 
