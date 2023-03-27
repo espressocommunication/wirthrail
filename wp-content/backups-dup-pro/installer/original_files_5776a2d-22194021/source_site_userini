@@ -1,0 +1,3 @@
+; Wordfence WAF
+auto_prepend_file = '/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com/wordfence-waf.php'
+; END Wordfence WAF

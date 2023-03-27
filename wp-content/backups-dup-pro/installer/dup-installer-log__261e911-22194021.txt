@@ -1,0 +1,1227 @@
+********************************************************************************
+* DUPLICATOR-PRO: Install-Log
+* STEP-0 START @ 07:46:55
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+PACKAGE INFO________ ORIGINAL SERVER                        |CURRENT SERVER
+OS__________________: Linux                                 |Linux
+PHP VERSION_________: 7.4.33                                |7.4.33
+********************************************************************************
+CURRENT SERVER INFO
+PHP_________________: 7.4.33 | SAPI: fpm-fcgi
+PHP MEMORY__________: 4294967296 | SUHOSIN: disabled
+ARCHITECTURE________: 64-bit
+SERVER______________: Apache
+DOC ROOT____________: "/var/www/vhosts/wirthrail.com/httpdocs"
+REQUEST URL_________: "https://wirthrail.com"
+********************************************************************************
+OVERWRITE PARAMS
+ *** FROM PACKAGE
+PARAM SET KEY[cpnl-dbaction]
+********************************************************************************
+MAINTENANCE MODE DISABLE
+INSTALLER INFO
+
+TEMPLATE____________: "base"
+VALIDATE ON START___: "normal"
+PATH_NEW____________: "/var/www/vhosts/wirthrail.com/httpdocs"
+URL_NEW_____________: "https://wirthrail.com"
+********************************************************************************
+ARCHIVE INFO
+
+ARCHIVE NAME________: "/var/www/vhosts/wirthrail.com/httpdocs/20221122_wirthrail_[HASH]_20221122194021_archive.zip"
+ARCHIVE SIZE________: 132.25MB
+CREATED_____________: 2022-11-22 19:40:21
+WP VERSION__________: 6.1.1
+DUP VERSION_________: 4.5.8.1
+LICENSE_____________: unlicensed
+DB VERSION__________: 10.2.36
+DB FILE SIZE________: 27.27MB
+DB TABLES___________: 75
+DB ROWS_____________: 49069
+URL HOME____________: https://wirthrail.espressoprod.com
+URL CORE____________: https://wirthrail.espressoprod.com
+URL CONTENT_________: https://wirthrail.espressoprod.com/wp-content
+URL UPLOAD__________: https://wirthrail.espressoprod.com/wp-content/uploads
+URL PLUGINS_________: https://wirthrail.espressoprod.com/wp-content/plugins
+URL MU PLUGINS______: https://wirthrail.espressoprod.com/wp-content/mu-plugins
+URL THEMES__________: https://wirthrail.espressoprod.com/wp-content/themes
+PATH HOME___________: /var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com
+PATH ABS____________: /var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com
+PATH WPCONFIG_______: /var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com
+PATH WPCONTENT______: /var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com/wp-content
+PATH UPLOADS________: /var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com/wp-content/uploads
+PATH PLUGINS________: /var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com/wp-content/plugins
+PATH MUPLUGINS______: /var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com/wp-content/mu-plugins
+PATH THEMES_________: /var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com/wp-content/themes
+
+SUBSITES
+SUBSITE [ID:   1] "wirthrail.espressoprod.com/"
+
+PLUGINS
+PLUGIN [SLUG:advanced-custom-fields-pro/acf.php                ][ON:true ]  Advanced Custom Fields PRO
+PLUGIN [SLUG:classic-editor/classic-editor.php                 ][ON:true ]  Classic Editor
+PLUGIN [SLUG:duplicate-page/duplicatepage.php                  ][ON:true ]  Duplicate Page
+PLUGIN [SLUG:duplicator-pro/duplicator-pro.php                 ][ON:true ]  Duplicator Pro
+PLUGIN [SLUG:gravityforms/gravityforms.php                     ][ON:true ]  Gravity Forms
+PLUGIN [SLUG:ninja-tables/ninja-tables.php                     ][ON:true ]  Ninja Tables
+PLUGIN [SLUG:ninja-tables-pro/ninja-tables-pro.php             ][ON:true ]  Ninja Tables Pro
+PLUGIN [SLUG:svg-support/svg-support.php                       ][ON:true ]  SVG Support
+PLUGIN [SLUG:wordfence/wordfence.php                           ][ON:true ]  Wordfence Security
+PLUGIN [SLUG:wpml-media-translation/plugin.php                 ][ON:true ]  WPML Media
+PLUGIN [SLUG:sitepress-multilingual-cms/sitepress.php          ][ON:true ]  WPML Multilingual CMS
+PLUGIN [SLUG:wp-seo-multilingual/plugin.php                    ][ON:true ]  WPML SEO
+PLUGIN [SLUG:wpml-string-translation/plugin.php                ][ON:true ]  WPML String Translation
+PLUGIN [SLUG:wordpress-seo/wp-seo.php                          ][ON:true ]  Yoast SEO
+PLUGIN [SLUG:maintenance.php                                   ][ON:false]  maintenance.php
+
+********************************************************************************
+LOG-TIME[/var/www/vhosts/wirthrail.com/httpdocs/dup-installer/ctrls/ctrl.base.php:228][DELTA:   0.10600]  MESSAGE:END RENDER PAGE
+LOG-TIME[/var/www/vhosts/wirthrail.com/httpdocs/dup-installer/src/Core/Bootstrap.php:73] RESET TIME
+
+-------------------------
+AJAX ACTION [sparam_s1] START
+AJAX ACTION [sparam_s1] SUCCESS
+-------------------------
+
+LOG-TIME[/var/www/vhosts/wirthrail.com/httpdocs/dup-installer/src/Core/Bootstrap.php:73] RESET TIME
+STEP ACTION: "on-validate"
+LOG-TIME[/var/www/vhosts/wirthrail.com/httpdocs/dup-installer/ctrls/ctrl.base.php:228][DELTA:   0.07630]  MESSAGE:END RENDER PAGE
+LOG-TIME[/var/www/vhosts/wirthrail.com/httpdocs/dup-installer/src/Core/Bootstrap.php:73] RESET TIME
+
+-------------------------
+AJAX ACTION [validate] START
+START TEST "Archive Check" [CLASS: DUPX_Validation_test_archive_check]
+LOG-TIME[DELTA:   0.00011]  MESSAGE:TEST "Archive Check" RESULT: passed
+
+START TEST "Duplicator importer version" [CLASS: DUPX_Validation_test_importer_version]
+LOG-TIME[DELTA:   0.00002]  MESSAGE:TEST "Duplicator importer version" RESULT: skip
+
+START TEST "Overwrite Install" [CLASS: DUPX_Validation_test_owrinstall]
+LOG-TIME[DELTA:   0.00002]  MESSAGE:TEST "Overwrite Install" RESULT: skip
+
+START TEST "Recovery Point" [CLASS: DUPX_Validation_test_recovery]
+LOG-TIME[DELTA:   0.00002]  MESSAGE:TEST "Recovery Point" RESULT: skip
+
+START TEST "Package is Importable" [CLASS: DUPX_Validation_test_importable]
+LOG-TIME[DELTA:   0.00003]  MESSAGE:TEST "Package is Importable" RESULT: skip
+
+START TEST "REST API test" [CLASS: DUPX_Validation_test_rest_api]
+LOG-TIME[DELTA:   0.00002]  MESSAGE:TEST "REST API test" RESULT: skip
+
+START TEST "Manual extraction detected" [CLASS: DUPX_Validation_test_manual_extraction]
+LOG-TIME[DELTA:   0.00001]  MESSAGE:TEST "Manual extraction detected" RESULT: good
+
+START TEST "Database Only" [CLASS: DUPX_Validation_test_dbonly_iswordpress]
+LOG-TIME[DELTA:   0.00001]  MESSAGE:TEST "Database Only" RESULT: skip
+
+START TEST "Package Age" [CLASS: DUPX_Validation_test_package_age]
+LOG-TIME[DELTA:   0.00007]  MESSAGE:TEST "Package Age" RESULT: good
+
+START TEST "Replace PATHs in database" [CLASS: DUPX_Validation_test_replace_paths]
+LOG-TIME[DELTA:   0.00002]  MESSAGE:TEST "Replace PATHs in database" RESULT: skip
+
+START TEST "Managed hosting supported" [CLASS: DUPX_Validation_test_managed_supported]
+LOG-TIME[DELTA:   0.00028]  MESSAGE:TEST "Managed hosting supported" RESULT: skip
+
+START TEST "Siteground" [CLASS: DUPX_Validation_test_siteground]
+LOG-TIME[DELTA:   0.00012]  MESSAGE:TEST "Siteground" RESULT: skip
+
+START TEST "Subomain multisite installation in subfolder" [CLASS: DUPX_Validation_test_multisite_subfolder]
+LOG-TIME[DELTA:   0.00002]  MESSAGE:TEST "Subomain multisite installation in subfolder" RESULT: skip
+
+START TEST "Addon Sites" [CLASS: DUPX_Validation_test_addon_sites]
+--------------------------------------
+PATHS MAPPING : "/var/www/vhosts/wirthrail.com/httpdocs"
+--------------------------------------
+LOG-TIME[DELTA:   0.13624]  MESSAGE:TEST "Addon Sites" RESULT: good
+
+START TEST "Wordfence" [CLASS: DUPX_Validation_test_wordfence]
+LOG-TIME[DELTA:   0.00033]  MESSAGE:TEST "Wordfence" RESULT: good
+
+START TEST "Table prefix of managed hosting" [CLASS: DUPX_Validation_test_managed_tprefix]
+LOG-TIME[DELTA:   0.00031]  MESSAGE:TEST "Table prefix of managed hosting" RESULT: skip
+
+START TEST "Wordpress Configuration" [CLASS: DUPX_Validation_test_wp_config]
+LOG-TIME[DELTA:   0.00211]  MESSAGE:TEST "Wordpress Configuration" RESULT: passed
+
+START TEST "PHP Version Mismatch" [CLASS: DUPX_Validation_test_php_version]
+LOG-TIME[DELTA:   0.00002]  MESSAGE:TEST "PHP Version Mismatch" RESULT: good
+
+START TEST "PHP Open Base" [CLASS: DUPX_Validation_test_open_basedir]
+LOG-TIME[DELTA:   0.00003]  MESSAGE:TEST "PHP Open Base" RESULT: good
+
+START TEST "PHP Memory Limit" [CLASS: DUPX_Validation_test_memory_limit]
+LOG-TIME[DELTA:   0.00004]  MESSAGE:TEST "PHP Memory Limit" RESULT: good
+
+START TEST "PHP Extensions" [CLASS: DUPX_Validation_test_extensions]
+LOG-TIME[DELTA:   0.00002]  MESSAGE:TEST "PHP Extensions" RESULT: good
+
+START TEST "PHP Mysqli" [CLASS: DUPX_Validation_test_mysql_connect]
+LOG-TIME[DELTA:   0.00002]  MESSAGE:TEST "PHP Mysqli" RESULT: passed
+
+START TEST "PHP Functions and Classes" [CLASS: DUPX_Validation_test_php_functionalities]
+LOG-TIME[DELTA:   0.00002]  MESSAGE:TEST "PHP Functions and Classes" RESULT: passed
+
+START TEST "PHP Timeout" [CLASS: DUPX_Validation_test_timeout]
+LOG-TIME[DELTA:   0.00002]  MESSAGE:TEST "PHP Timeout" RESULT: good
+
+START TEST "Disk Space" [CLASS: DUPX_Validation_test_disk_space]
+LOG-TIME[DELTA:   0.00083]  MESSAGE:TEST "Disk Space" RESULT: good
+
+START TEST "Permissions: General" [CLASS: DUPX_Validation_test_iswritable]
+LOG-TIME[DELTA:   0.15465]  MESSAGE:TEST "Permissions: General" RESULT: passed
+
+START TEST "Permissions: Configs Files " [CLASS: DUPX_Validation_test_iswritable_configs]
+LOG-TIME[DELTA:   0.00043]  MESSAGE:TEST "Permissions: Configs Files " RESULT: passed
+
+START TEST "Cpanel connection" [CLASS: DUPX_Validation_test_cpnl_connection]
+LOG-TIME[DELTA:   0.00004]  MESSAGE:TEST "Cpanel connection" RESULT: skip
+
+START TEST "Create Database User" [CLASS: DUPX_Validation_test_cpnl_new_user]
+LOG-TIME[DELTA:   0.00002]  MESSAGE:TEST "Create Database User" RESULT: skip
+
+START TEST "Host Name" [CLASS: DUPX_Validation_test_db_host_name]
+LOG-TIME[DELTA:   0.00009]  MESSAGE:TEST "Host Name" RESULT: passed
+
+START TEST "Host Connection" [CLASS: DUPX_Validation_test_db_connection]
+LOG-TIME[DELTA:   0.00113]  MESSAGE:TEST "Host Connection" RESULT: passed
+
+START TEST "Database Version" [CLASS: DUPX_Validation_test_db_version]
+LOG-TIME[DELTA:   0.00118]  MESSAGE:TEST "Database Version" RESULT: passed
+
+START TEST "Create New Database" [CLASS: DUPX_Validation_test_db_create]
+LOG-TIME[DELTA:   0.00002]  MESSAGE:TEST "Create New Database" RESULT: skip
+
+START TEST "Database Engine Support" [CLASS: DUPX_Validation_test_db_supported_engine]
+LOG-TIME[DELTA:   0.00019]  MESSAGE:TEST "Database Engine Support" RESULT: passed
+
+START TEST "Database GTID Mode" [CLASS: DUPX_Validation_test_db_gtid_mode]
+LOG-TIME[DELTA:   0.00049]  MESSAGE:TEST "Database GTID Mode" RESULT: passed
+
+START TEST "Privileges: User Visibility" [CLASS: DUPX_Validation_test_db_visibility]
+LOG-TIME[DELTA:   0.00010]  MESSAGE:TEST "Privileges: User Visibility" RESULT: passed
+
+START TEST "Manual Table Check" [CLASS: DUPX_Validation_test_db_manual_tabels_count]
+LOG-TIME[DELTA:   0.00002]  MESSAGE:TEST "Manual Table Check" RESULT: skip
+
+START TEST "Multiple WP Installs" [CLASS: DUPX_Validation_test_db_multiple_wp_installs]
+LOG-TIME[DELTA:   0.00036]  MESSAGE:TEST "Multiple WP Installs" RESULT: passed
+
+START TEST "Privileges: User Resources" [CLASS: DUPX_Validation_test_db_user_resources]
+DB QUERY [ERROR][/var/www/vhosts/wirthrail.com/httpdocs/dup-installer/classes/database/class.db.php:652] MSG: SELECT command denied to user 'wt_fr6e0'@'localhost' for table 'user'
+	SQL: SELECT max_questions, max_updates, max_connections FROM mysql.user WHERE user = 'wt_fr6e0' AND host = 'localhost'
+TRACE[1] CLASS___: DUPX_DB::mysqli_query      FILE: /var/www/vhosts/wirthrail.com/httpdocs/dup-installer/classes/validation/class.validation.database.service.php[978]
+TRACE[2] CLASS___: DUPX_Validation_database_service->getUserResources FILE: /var/www/vhosts/wirthrail.com/httpdocs/dup-installer/classes/validation/database-tests/class.validation.test.db.user.resources.php[28]
+TRACE[3] CLASS___: DUPX_Validation_test_db_user_resources->runTest FILE: /var/www/vhosts/wirthrail.com/httpdocs/dup-installer/classes/validation/class.validation.abstract.item.php[46]
+TRACE[4] CLASS___: DUPX_Validation_abstract_item->test FILE: /var/www/vhosts/wirthrail.com/httpdocs/dup-installer/classes/validation/class.validation.manager.php[239]
+TRACE[5] CLASS___: DUPX_Validation_manager->runTests FILE: /var/www/vhosts/wirthrail.com/httpdocs/dup-installer/classes/validation/class.validation.manager.php[212]
+TRACE[6] CLASS___: DUPX_Validation_manager->getValidateData FILE: /var/www/vhosts/wirthrail.com/httpdocs/dup-installer/ctrls/classes/class.ctrl.ajax.php[171]
+TRACE[7] CLASS___: DUPX_Ctrl_ajax::actions    FILE: /var/www/vhosts/wirthrail.com/httpdocs/dup-installer/ctrls/classes/class.ctrl.ajax.php[96]
+TRACE[8] CLASS___: DUPX_Ctrl_ajax::controller FILE: /var/www/vhosts/wirthrail.com/httpdocs/dup-installer/main.installer.php[47]
+
+LOG-TIME[DELTA:   0.00017]  MESSAGE:TEST "Privileges: User Resources" RESULT: passed
+
+START TEST "Privileges: User Table Access" [CLASS: DUPX_Validation_test_db_user_perms]
+LOG-TIME[DELTA:   0.00774]  MESSAGE:TEST "Privileges: User Table Access" RESULT: passed
+
+START TEST "Privileges: 'Show Variables' Query" [CLASS: DUPX_Validation_test_db_custom_queries]
+LOG-TIME[DELTA:   0.00049]  MESSAGE:TEST "Privileges: 'Show Variables' Query" RESULT: passed
+
+START TEST "Source Database Triggers" [CLASS: DUPX_Validation_test_db_triggers]
+LOG-TIME[DELTA:   0.00002]  MESSAGE:TEST "Source Database Triggers" RESULT: passed
+
+START TEST "Character Set and Collation Support" [CLASS: DUPX_Validation_test_db_supported_default_charset]
+LOG-TIME[DELTA:   0.00091]  MESSAGE:TEST "Character Set and Collation Support" RESULT: passed
+
+START TEST "Character Set and  Collation Capability" [CLASS: DUPX_Validation_test_db_supported_charset]
+LOG-TIME[DELTA:   0.00009]  MESSAGE:TEST "Character Set and  Collation Capability" RESULT: passed
+
+START TEST "Tables Case Sensitivity" [CLASS: DUPX_Validation_test_db_case_sensitive_tables]
+LOG-TIME[DELTA:   0.00048]  MESSAGE:TEST "Tables Case Sensitivity" RESULT: passed
+
+START TEST "Tables Flagged for Removal or Backup" [CLASS: DUPX_Validation_test_db_affected_tables]
+LOG-TIME[DELTA:   0.00033]  MESSAGE:TEST "Tables Flagged for Removal or Backup" RESULT: passed
+
+START TEST "Prefix too long" [CLASS: DUPX_Validation_test_db_prefix_too_long]
+LOG-TIME[DELTA:   0.00024]  MESSAGE:TEST "Prefix too long" RESULT: passed
+
+START TEST "Database cleanup" [CLASS: DUPX_Validation_test_db_cleanup]
+LOG-TIME[DELTA:   0.00001]  MESSAGE:TEST "Database cleanup" RESULT: skip
+
+START TEST "User created cleanup" [CLASS: DUPX_Validation_test_db_user_cleanup]
+LOG-TIME[DELTA:   0.00001]  MESSAGE:TEST "User created cleanup" RESULT: skip
+
+
+CTRL PARAMS AFTER VALIDATION
+AJAX ACTION [validate] SUCCESS
+-------------------------
+
+LOG-TIME[/var/www/vhosts/wirthrail.com/httpdocs/dup-installer/src/Core/Bootstrap.php:73] RESET TIME
+
+-------------------------
+AJAX ACTION [proceed_confirm_dialog] START
+AJAX ACTION [proceed_confirm_dialog] SUCCESS
+-------------------------
+
+LOG-TIME[/var/www/vhosts/wirthrail.com/httpdocs/dup-installer/src/Core/Bootstrap.php:73] RESET TIME
+
+-------------------------
+AJAX ACTION [sparam_s1] START
+AJAX ACTION [sparam_s1] SUCCESS
+-------------------------
+
+LOG-TIME[/var/www/vhosts/wirthrail.com/httpdocs/dup-installer/src/Core/Bootstrap.php:73] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+INITIALIZE FILTERS
+--------------------------------------
+PATHS MAPPING : "/var/www/vhosts/wirthrail.com/httpdocs"
+--------------------------------------
+********************************************************************************
+* DUPLICATOR-PRO: Install-Log
+* STEP-1 START @ 07:48:40
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+USER INPUTS
+INSTALL TYPE________: single site
+BLOG NAME___________: "Wirth Rail"
+HOME URL NEW________: "https://wirthrail.com"
+SITE URL NEW________: "https://wirthrail.com"
+CONTENT URL NEW_____: "https://wirthrail.com/wp-content"
+UPLOAD URL NEW______: "https://wirthrail.com/wp-content/uploads"
+PLUGINS URL NEW_____: "https://wirthrail.com/wp-content/plugins"
+MUPLUGINS URL NEW___: "https://wirthrail.com/wp-content/mu-plugins"
+HOME PATH NEW_______: "/var/www/vhosts/wirthrail.com/httpdocs"
+SITE PATH NEW_______: "/var/www/vhosts/wirthrail.com/httpdocs"
+CONTENT PATH NEW____: "/var/www/vhosts/wirthrail.com/httpdocs/wp-content"
+UPLOAD PATH NEW_____: "/var/www/vhosts/wirthrail.com/httpdocs/wp-content/uploads"
+PLUGINS PATH NEW____: "/var/www/vhosts/wirthrail.com/httpdocs/wp-content/plugins"
+MUPLUGINS PATH NEW__: "/var/www/vhosts/wirthrail.com/httpdocs/wp-content/mu-plugins"
+ARCHIVE ACTION______: "donothing"
+SKIP WP FILES_______: "none"
+ARCHIVE ENGINE______: "ziparchivechunking"
+SET DIR PERMS_______: true
+DIR PERMS VALUE_____: 0755
+SET FILE PERMS______: true
+FILE PERMS VALUE____: 0644
+SAFE MODE___________: 0
+LOGGING_____________: 1
+ZIP THROTTLING______: false
+WP CONFIG___________: "modify"
+HTACCESS CONFIG_____: "new"
+OTHER CONFIG________: "new"
+FILE TIME___________: "current"
+REMOVE RENDUNDANT___: false
+********************************************************************************
+
+REMOVE FILTERS
+	DIR : "/var/www/vhosts/wirthrail.com/httpdocs/dup-installer"
+	FILE: "/var/www/vhosts/wirthrail.com/httpdocs/20221122_wirthrail_[HASH]_20221122194021_installer-backup.php"
+	FILE: "/var/www/vhosts/wirthrail.com/httpdocs/20221122_wirthrail_[HASH]_20221122194021_archive.zip"
+	FILE: "/var/www/vhosts/wirthrail.com/httpdocs/installer.php"
+	FILE: "/var/www/vhosts/wirthrail.com/httpdocs/dup-installer-bootlog__261e911-22194021.txt"
+EXTRACTION FILTERS
+	DIR : "dup-installer"
+	FILE: "20221122_wirthrail_[HASH]_20221122194021_installer-backup.php"
+--------------------------------------
+
+
+EXTRACTION: ZIP CHUNKING >>> START
+MAINTENANCE MODE ENABLE
+BEFORE EXTRACION ACTIONS
+
+*** RESET CONFIG FILES IN CURRENT HOSTING
+*** RESET CONFIG FILES END
+MAINTENANCE MODE ENABLE
+
+*** CREATE FOLDER AND PERMISSION PREPARE
+FOLDER PREPARE DONE
+ARCHIVE OFFSET 0
+CHUNK COMPLETE - RUNTIME: 5.0061 sec. - Files processed: 3,215 of 18,018
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/var/www/vhosts/wirthrail.com/httpdocs/dup-installer/src/Core/Bootstrap.php:73] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+MAINTENANCE MODE ENABLE
+ARCHIVE OFFSET 3215
+--------------------------------------
+PATHS MAPPING : "/var/www/vhosts/wirthrail.com/httpdocs"
+--------------------------------------
+CHUNK COMPLETE - RUNTIME: 5.0067 sec. - Files processed: 7,468 of 18,018
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/var/www/vhosts/wirthrail.com/httpdocs/dup-installer/src/Core/Bootstrap.php:73] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+MAINTENANCE MODE ENABLE
+ARCHIVE OFFSET 7468
+--------------------------------------
+PATHS MAPPING : "/var/www/vhosts/wirthrail.com/httpdocs"
+--------------------------------------
+CHUNK COMPLETE - RUNTIME: 5.0057 sec. - Files processed: 11,585 of 18,018
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/var/www/vhosts/wirthrail.com/httpdocs/dup-installer/src/Core/Bootstrap.php:73] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+MAINTENANCE MODE ENABLE
+ARCHIVE OFFSET 11585
+--------------------------------------
+PATHS MAPPING : "/var/www/vhosts/wirthrail.com/httpdocs"
+--------------------------------------
+CHUNK COMPLETE - RUNTIME: 5.0070 sec. - Files processed: 15,872 of 18,018
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/var/www/vhosts/wirthrail.com/httpdocs/dup-installer/src/Core/Bootstrap.php:73] RESET TIME
+
+-------------------------
+AJAX ACTION [extract] START
+MAINTENANCE MODE ENABLE
+ARCHIVE OFFSET 15872
+--------------------------------------
+PATHS MAPPING : "/var/www/vhosts/wirthrail.com/httpdocs"
+--------------------------------------
+FILE EXTRACTION: done processing last file in list of 18850
+
+EXTRACTION: ZIP CHUNKING >>> DONE
+
+EXTRACTION COMPLETE @ 07:49:04 - RUNTIME: 24.5683 sec. - Files processed: 18,018 of 18,018
+AJAX ACTION [extract] SUCCESS
+-------------------------
+
+LOG-TIME[/var/www/vhosts/wirthrail.com/httpdocs/dup-installer/src/Core/Bootstrap.php:73] RESET TIME
+
+-------------------------
+AJAX ACTION [dbinstall] START
+ADD PREFIX META MAP ID 0 cRUvD1Vc_
+
+
+
+********************************************************************************
+* DUPLICATOR PRO INSTALL-LOG
+* STEP-2 START @ 07:49:05
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+USER INPUTS
+DB ENGINE___________: "chunk"
+VIEW MODE___________: "basic"
+DB ACTION___________: "empty"
+DB HOST_____________: "**OBSCURED**"
+DB NAME_____________: "**OBSCURED**"
+DB PASS_____________: "**OBSCURED**"
+DB PORT_____________: "**OBSCURED**"
+USER MODE___________: "overwrite"
+TABLE PREFIX________: "cRUvD1Vc_"
+MYSQL MODE__________: "DEFAULT"
+MYSQL MODE OPTS_____: ""
+CHARSET_____________: "utf8"
+COLLATE_____________: ""
+CUNKING_____________: true
+VIEW CREATION_______: true
+STORED PROCEDURE____: true
+FUNCTIONS___________: true
+REMOVE DEFINER______: false
+SPLIT CREATES_______: true
+--------------------------------------
+TABLES
+--------------------------------------
+TABLE "cRUvD1Vc_commentmeta"____________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_commentmeta]
+TABLE "cRUvD1Vc_comments"_______________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_comments]
+TABLE "cRUvD1Vc_duplicator_pro_entities"________________[ROWS:       5] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_duplicator_pro_entities]
+TABLE "cRUvD1Vc_duplicator_pro_packages"________________[ROWS:       1] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_duplicator_pro_packages]
+TABLE "cRUvD1Vc_gf_draft_submissions"___________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_gf_draft_submissions]
+TABLE "cRUvD1Vc_gf_entry"_______________________________[ROWS:      59] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_gf_entry]
+TABLE "cRUvD1Vc_gf_entry_meta"__________________________[ROWS:     236] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_gf_entry_meta]
+TABLE "cRUvD1Vc_gf_entry_notes"_________________________[ROWS:      59] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_gf_entry_notes]
+TABLE "cRUvD1Vc_gf_form"________________________________[ROWS:       1] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_gf_form]
+TABLE "cRUvD1Vc_gf_form_meta"___________________________[ROWS:       1] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_gf_form_meta]
+TABLE "cRUvD1Vc_gf_form_revisions"______________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_gf_form_revisions]
+TABLE "cRUvD1Vc_gf_form_view"___________________________[ROWS:      74] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_gf_form_view]
+TABLE "cRUvD1Vc_gf_rest_api_keys"_______________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_gf_rest_api_keys]
+TABLE "cRUvD1Vc_icl_content_status"_____________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_icl_content_status]
+TABLE "cRUvD1Vc_icl_core_status"________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_icl_core_status]
+TABLE "cRUvD1Vc_icl_flags"______________________________[ROWS:      65] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_icl_flags]
+TABLE "cRUvD1Vc_icl_languages"__________________________[ROWS:      65] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_icl_languages]
+TABLE "cRUvD1Vc_icl_languages_translations"_____________[ROWS:    4225] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_icl_languages_translations]
+TABLE "cRUvD1Vc_icl_locale_map"_________________________[ROWS:       5] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_icl_locale_map]
+TABLE "cRUvD1Vc_icl_message_status"_____________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_icl_message_status]
+TABLE "cRUvD1Vc_icl_mo_files_domains"___________________[ROWS:     204] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_icl_mo_files_domains]
+TABLE "cRUvD1Vc_icl_node"_______________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_icl_node]
+TABLE "cRUvD1Vc_icl_reminders"__________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_icl_reminders]
+TABLE "cRUvD1Vc_icl_strings"____________________________[ROWS:      44] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_icl_strings]
+TABLE "cRUvD1Vc_icl_string_batches"_____________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_icl_string_batches]
+TABLE "cRUvD1Vc_icl_string_packages"____________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_icl_string_packages]
+TABLE "cRUvD1Vc_icl_string_pages"_______________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_icl_string_pages]
+TABLE "cRUvD1Vc_icl_string_positions"___________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_icl_string_positions]
+TABLE "cRUvD1Vc_icl_string_status"______________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_icl_string_status]
+TABLE "cRUvD1Vc_icl_string_translations"________________[ROWS:       3] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_icl_string_translations]
+TABLE "cRUvD1Vc_icl_string_urls"________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_icl_string_urls]
+TABLE "cRUvD1Vc_icl_translate"__________________________[ROWS:      16] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_icl_translate]
+TABLE "cRUvD1Vc_icl_translate_job"______________________[ROWS:       2] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_icl_translate_job]
+TABLE "cRUvD1Vc_icl_translations"_______________________[ROWS:    1160] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_icl_translations]
+TABLE "cRUvD1Vc_icl_translation_batches"________________[ROWS:       2] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_icl_translation_batches]
+TABLE "cRUvD1Vc_icl_translation_downloads"______________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_icl_translation_downloads]
+TABLE "cRUvD1Vc_icl_translation_status"_________________[ROWS:     703] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_icl_translation_status]
+TABLE "cRUvD1Vc_links"__________________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_links]
+TABLE "cRUvD1Vc_ninja_table_items"______________________[ROWS:     229] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_ninja_table_items]
+TABLE "cRUvD1Vc_options"________________________________[ROWS:     336] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_options]
+TABLE "cRUvD1Vc_postmeta"_______________________________[ROWS:   20219] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_postmeta]
+TABLE "cRUvD1Vc_posts"__________________________________[ROWS:    2050] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_posts]
+TABLE "cRUvD1Vc_termmeta"_______________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_termmeta]
+TABLE "cRUvD1Vc_terms"__________________________________[ROWS:      23] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_terms]
+TABLE "cRUvD1Vc_term_relationships"_____________________[ROWS:     145] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_term_relationships]
+TABLE "cRUvD1Vc_term_taxonomy"__________________________[ROWS:      23] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_term_taxonomy]
+TABLE "cRUvD1Vc_usermeta"_______________________________[ROWS:     113] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_usermeta]
+TABLE "cRUvD1Vc_users"__________________________________[ROWS:       3] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_users]
+TABLE "cRUvD1Vc_wfblockediplog"_________________________[ROWS:     913] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_wfblockediplog]
+TABLE "cRUvD1Vc_wfblocks7"______________________________[ROWS:      17] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_wfblocks7]
+TABLE "cRUvD1Vc_wfconfig"_______________________________[ROWS:     269] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_wfconfig]
+TABLE "cRUvD1Vc_wfcrawlers"_____________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_wfcrawlers]
+TABLE "cRUvD1Vc_wffilechanges"__________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_wffilechanges]
+TABLE "cRUvD1Vc_wffilemods"_____________________________[ROWS:   10913] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_wffilemods]
+TABLE "cRUvD1Vc_wfhits"_________________________________[ROWS:    1327] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_wfhits]
+TABLE "cRUvD1Vc_wfhoover"_______________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_wfhoover]
+TABLE "cRUvD1Vc_wfissues"_______________________________[ROWS:       3] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_wfissues]
+TABLE "cRUvD1Vc_wfknownfilelist"________________________[ROWS:   10913] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_wfknownfilelist]
+TABLE "cRUvD1Vc_wflivetraffichuman"_____________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_wflivetraffichuman]
+TABLE "cRUvD1Vc_wflocs"_________________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_wflocs]
+TABLE "cRUvD1Vc_wflogins"_______________________________[ROWS:    1020] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_wflogins]
+TABLE "cRUvD1Vc_wfls_2fa_secrets"_______________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_wfls_2fa_secrets]
+TABLE "cRUvD1Vc_wfls_settings"__________________________[ROWS:      24] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_wfls_settings]
+TABLE "cRUvD1Vc_wfnotifications"________________________[ROWS:      20] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_wfnotifications]
+TABLE "cRUvD1Vc_wfpendingissues"________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_wfpendingissues]
+TABLE "cRUvD1Vc_wfreversecache"_________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_wfreversecache]
+TABLE "cRUvD1Vc_wfsnipcache"____________________________[ROWS:       1] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_wfsnipcache]
+TABLE "cRUvD1Vc_wfstatus"_______________________________[ROWS:     953] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_wfstatus]
+TABLE "cRUvD1Vc_wftrafficrates"_________________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_wftrafficrates]
+TABLE "cRUvD1Vc_yoast_indexable"________________________[ROWS:     701] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_yoast_indexable]
+TABLE "cRUvD1Vc_yoast_indexable_hierarchy"______________[ROWS:     525] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_yoast_indexable_hierarchy]
+TABLE "cRUvD1Vc_yoast_migrations"_______________________[ROWS:      23] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_yoast_migrations]
+TABLE "cRUvD1Vc_yoast_primary_term"_____________________[ROWS:       0] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_yoast_primary_term]
+TABLE "cRUvD1Vc_yoast_seo_links"________________________[ROWS:       8] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_yoast_seo_links]
+TABLE "cRUvD1Vc_yoast_seo_meta"_________________________[ROWS:      26] [EXTRACT|REPLACE] [INST NAME: cRUvD1Vc_yoast_seo_meta]
+********************************************************************************
+
+--------------------------------------
+DATABASE-ENVIRONMENT
+--------------------------------------
+MYSQL VERSION:	This Server: 10.2.36 -- Build Server: 10.2.36
+FILE SIZE:	dup-database__[HASH].sql (13.58MB)
+TIMEOUT:	5000
+MAXPACK:	67108864
+SQLMODE-GLOBAL:	ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+SQLMODE-SESSION:NO_AUTO_VALUE_ON_ZERO
+DROP ALL TABLES
+--------------------------------------
+DATABASE RESULTS
+--------------------------------------
+QUERY FIXES
+GLOBAL RULES ADDED: PROC AND VIEWS
+
+QUERY FIXES GLOBAL RULES
+	SEARCH  => /^(\s*(?:\/\*!\d+\s)?\s*(?:CREATE.+)?DEFINER\s*=)([^\*\s]+)(.*)$/m
+	REPLACE => $1`wt_fr6e0`@`localhost`$3
+
+	SEARCH  => /^(\s*CREATE.+(?:PROCEDURE|FUNCTION)[\s\S]*)(BEGIN)([\s\S]*)$/
+	REPLACE => $1SQL SECURITY INVOKER
+$2$3
+
+--------------------------------------
+** DATABASE CHUNK install start
+--------------------------------------
+DATABASE CHUNK SEEK POSITION: 0
+Auto Commit set to false successfully
+NO TABLE TO SKIP
+DATABASE CHUNK: CREATION TABLE MARKER FOUND
+Auto Commit set to true successfully
+--------------------------------------
+** DATABASE CHUNK install end
+--------------------------------------
+ERRORS FOUND:	0
+DROPPED TABLES:	0
+RENAMED TABLES:	0
+QUERIES RAN:	216
+
+TABLES ROWS IN DATABASE AFTER EXTRACTION
+
+TABLE "cRUvD1Vc_commentmeta"____________________________[ROWS:     0]
+TABLE "cRUvD1Vc_comments"_______________________________[ROWS:     0]
+TABLE "cRUvD1Vc_duplicator_pro_entities"________________[ROWS:     5]
+TABLE "cRUvD1Vc_duplicator_pro_packages"________________[ROWS:     1]
+TABLE "cRUvD1Vc_gf_draft_submissions"___________________[ROWS:     0]
+TABLE "cRUvD1Vc_gf_entry"_______________________________[ROWS:    59]
+TABLE "cRUvD1Vc_gf_entry_meta"__________________________[ROWS:   236]
+TABLE "cRUvD1Vc_gf_entry_notes"_________________________[ROWS:    59]
+TABLE "cRUvD1Vc_gf_form"________________________________[ROWS:     1]
+TABLE "cRUvD1Vc_gf_form_meta"___________________________[ROWS:     1]
+TABLE "cRUvD1Vc_gf_form_revisions"______________________[ROWS:     0]
+TABLE "cRUvD1Vc_gf_form_view"___________________________[ROWS:    74]
+TABLE "cRUvD1Vc_gf_rest_api_keys"_______________________[ROWS:     0]
+TABLE "cRUvD1Vc_icl_content_status"_____________________[ROWS:     0]
+TABLE "cRUvD1Vc_icl_core_status"________________________[ROWS:     0]
+TABLE "cRUvD1Vc_icl_flags"______________________________[ROWS:    65]
+TABLE "cRUvD1Vc_icl_languages"__________________________[ROWS:    65]
+TABLE "cRUvD1Vc_icl_languages_translations"_____________[ROWS:  4225]
+TABLE "cRUvD1Vc_icl_locale_map"_________________________[ROWS:     5]
+TABLE "cRUvD1Vc_icl_message_status"_____________________[ROWS:     0]
+TABLE "cRUvD1Vc_icl_mo_files_domains"___________________[ROWS:   204]
+TABLE "cRUvD1Vc_icl_node"_______________________________[ROWS:     0]
+TABLE "cRUvD1Vc_icl_reminders"__________________________[ROWS:     0]
+TABLE "cRUvD1Vc_icl_string_batches"_____________________[ROWS:     0]
+TABLE "cRUvD1Vc_icl_string_packages"____________________[ROWS:     0]
+TABLE "cRUvD1Vc_icl_string_pages"_______________________[ROWS:     0]
+TABLE "cRUvD1Vc_icl_string_positions"___________________[ROWS:     0]
+TABLE "cRUvD1Vc_icl_string_status"______________________[ROWS:     0]
+TABLE "cRUvD1Vc_icl_string_translations"________________[ROWS:     3]
+TABLE "cRUvD1Vc_icl_string_urls"________________________[ROWS:     0]
+TABLE "cRUvD1Vc_icl_strings"____________________________[ROWS:    44]
+TABLE "cRUvD1Vc_icl_translate"__________________________[ROWS:    16]
+TABLE "cRUvD1Vc_icl_translate_job"______________________[ROWS:     2]
+TABLE "cRUvD1Vc_icl_translation_batches"________________[ROWS:     2]
+TABLE "cRUvD1Vc_icl_translation_downloads"______________[ROWS:     0]
+TABLE "cRUvD1Vc_icl_translation_status"_________________[ROWS:   703]
+TABLE "cRUvD1Vc_icl_translations"_______________________[ROWS:  1160]
+TABLE "cRUvD1Vc_links"__________________________________[ROWS:     0]
+TABLE "cRUvD1Vc_ninja_table_items"______________________[ROWS:   229]
+TABLE "cRUvD1Vc_options"________________________________[ROWS:   336]
+TABLE "cRUvD1Vc_postmeta"_______________________________[ROWS: 20219]
+TABLE "cRUvD1Vc_posts"__________________________________[ROWS:  2050]
+TABLE "cRUvD1Vc_term_relationships"_____________________[ROWS:   145]
+TABLE "cRUvD1Vc_term_taxonomy"__________________________[ROWS:    23]
+TABLE "cRUvD1Vc_termmeta"_______________________________[ROWS:     0]
+TABLE "cRUvD1Vc_terms"__________________________________[ROWS:    23]
+TABLE "cRUvD1Vc_usermeta"_______________________________[ROWS:   113]
+TABLE "cRUvD1Vc_users"__________________________________[ROWS:     3]
+TABLE "cRUvD1Vc_wfblockediplog"_________________________[ROWS:   913]
+TABLE "cRUvD1Vc_wfblocks7"______________________________[ROWS:    17]
+TABLE "cRUvD1Vc_wfconfig"_______________________________[ROWS:   269]
+TABLE "cRUvD1Vc_wfcrawlers"_____________________________[ROWS:     0]
+TABLE "cRUvD1Vc_wffilechanges"__________________________[ROWS:     0]
+TABLE "cRUvD1Vc_wffilemods"_____________________________[ROWS: 10913]
+TABLE "cRUvD1Vc_wfhits"_________________________________[ROWS:  1327]
+TABLE "cRUvD1Vc_wfhoover"_______________________________[ROWS:     0]
+TABLE "cRUvD1Vc_wfissues"_______________________________[ROWS:     3]
+TABLE "cRUvD1Vc_wfknownfilelist"________________________[ROWS: 10913]
+TABLE "cRUvD1Vc_wflivetraffichuman"_____________________[ROWS:     0]
+TABLE "cRUvD1Vc_wflocs"_________________________________[ROWS:     0]
+TABLE "cRUvD1Vc_wflogins"_______________________________[ROWS:  1020]
+TABLE "cRUvD1Vc_wfls_2fa_secrets"_______________________[ROWS:     0]
+TABLE "cRUvD1Vc_wfls_settings"__________________________[ROWS:    24]
+TABLE "cRUvD1Vc_wfnotifications"________________________[ROWS:    20]
+TABLE "cRUvD1Vc_wfpendingissues"________________________[ROWS:     0]
+TABLE "cRUvD1Vc_wfreversecache"_________________________[ROWS:     0]
+TABLE "cRUvD1Vc_wfsnipcache"____________________________[ROWS:     1]
+TABLE "cRUvD1Vc_wfstatus"_______________________________[ROWS:   953]
+TABLE "cRUvD1Vc_wftrafficrates"_________________________[ROWS:     0]
+TABLE "cRUvD1Vc_yoast_indexable"________________________[ROWS:   701]
+TABLE "cRUvD1Vc_yoast_indexable_hierarchy"______________[ROWS:   525]
+TABLE "cRUvD1Vc_yoast_migrations"_______________________[ROWS:    23]
+TABLE "cRUvD1Vc_yoast_primary_term"_____________________[ROWS:     0]
+TABLE "cRUvD1Vc_yoast_seo_links"________________________[ROWS:     8]
+TABLE "cRUvD1Vc_yoast_seo_meta"_________________________[ROWS:    26]
+
+INSERT DATA RUNTIME: 1.4392 sec.
+STEP-2 COMPLETE @ 07:49:06 - RUNTIME: 1.4394 sec.
+AJAX ACTION [dbinstall] SUCCESS
+-------------------------
+
+LOG-TIME[/var/www/vhosts/wirthrail.com/httpdocs/dup-installer/src/Core/Bootstrap.php:73] RESET TIME
+
+-------------------------
+AJAX ACTION [webupdate] START
+
+====================================
+SET SEARCH AND REPLACE LIST INSTALL TYPE single site
+====================================
+SEARCH ITEM[T:path |P:12] SEARCH: /var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com REPLACE: /var/www/vhosts/wirthrail.com/httpdocs [SCOPE: ALL]
+SEARCH ITEM[T:urlnd|P:12] SEARCH: https://wirthrail.espressoprod.com REPLACE: https://wirthrail.com [SCOPE: ALL]
+CHUNK LOAD DATA: IS NULL 
+CHUNK ACTION: CURRENT [start][][]
+
+
+********************************************************************************
+DUPLICATOR PRO INSTALL-LOG
+STEP-3 START @ 07:49:07
+NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+CHARSET SERVER:	"utf8"
+CHARSET CLIENT:	"utf8"
+********************************************************************************
+OPTIONS:
+SKIP PATH REPLACE_____: false
+DISALLOW_FILE_EDIT____: [value = ], [inWpConfig = ]
+DISALLOW_FILE_MODS____: [value = ], [inWpConfig = ]
+AUTOSAVE_INTERVAL_____: [value = 60], [inWpConfig = ]
+WP_POST_REVISIONS_____: [value = 9223372036854775807], [inWpConfig = ]
+FORCE_SSL_ADMIN_______: [value = 1], [inWpConfig = ]
+WP_AUTO_UPDATE_CORE___: [value = minor], [inWpConfig = 1]
+WP_CACHE______________: [value = ], [inWpConfig = ]
+WPCACHEHOME___________: [value = /], [inWpConfig = ]
+WP_DEBUG______________: [value = ], [inWpConfig = 1]
+WP_DEBUG_LOG__________: [value = ], [inWpConfig = ]
+WP_DEBUG_DISPLAY______: [value = 1], [inWpConfig = ]
+WP_DISABLE_FATAL_ERROR_HANDLER: [value = ], [inWpConfig = ]
+SCRIPT_DEBUG__________: [value = ], [inWpConfig = ]
+CONCATENATE_SCRIPTS___: [value = ], [inWpConfig = ]
+SAVEQUERIES___________: [value = ], [inWpConfig = ]
+ALTERNATE_WP_CRON_____: [value = ], [inWpConfig = ]
+DISABLE_WP_CRON_______: [value = ], [inWpConfig = ]
+WP_CRON_LOCK_TIMEOUT__: [value = 60], [inWpConfig = ]
+COOKIE_DOMAIN_________: [value = ], [inWpConfig = ]
+WP_MEMORY_LIMIT_______: [value = 40M], [inWpConfig = ]
+WP_MAX_MEMORY_LIMIT___: [value = 256M], [inWpConfig = ]
+WP_TEMP_DIR___________: [value = ], [inWpConfig = ]
+********************************************************************************
+
+********************************************************************************
+CHUNK PARAMS:
+maxIteration__________: 0
+timeOut_______________: 5000
+throttling____________: 2
+rowsPerPage___________: 1000
+********************************************************************************
+
+CHUNK ACTION: CURRENT [cleanup_trans][][]
+CLEAN OPTIONS [cRUvD1Vc_options]
+	`option_name` LIKE "\_transient%"
+	`option_name` LIKE "\_site\_transient%"
+	`option_name` IN ("duplicator_pro_ui_view_state","duplicator_pro_package_active","duplicator_pro_settings")
+DATABASE OPTIONS DELETED [ROWS:    60]
+CHUNK ACTION: CURRENT [cleanup_extra][][]
+CLEANUP EXTRA
+	- SKIP DROP VIEWS
+	- SKIP DROP PROCS
+	- SKIP DROP FUNCS
+CHUNK ACTION: CURRENT [cleanup_packages][][]
+EMPTY PACKAGES TABLE
+CLEAN PACKAGES
+DATABASE PACKAGE DELETED [ROWS:     1]
+CHUNK ACTION: CURRENT [init][][]
+
+EVALUATE TABLE: "cRUvD1Vc_commentmeta"____________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_comments"_______________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_duplicator_pro_entities"________________[ROWS:     5][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_duplicator_pro_entities][0]
+
+EVALUATE TABLE: "cRUvD1Vc_duplicator_pro_packages"________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_gf_draft_submissions"___________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_gf_entry"_______________________________[ROWS:    59][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_gf_entry][0]
+
+EVALUATE TABLE: "cRUvD1Vc_gf_entry_meta"__________________________[ROWS:   236][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_gf_entry_meta][0]
+
+EVALUATE TABLE: "cRUvD1Vc_gf_entry_notes"_________________________[ROWS:    59][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_gf_entry_notes][0]
+
+EVALUATE TABLE: "cRUvD1Vc_gf_form"________________________________[ROWS:     1][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_gf_form][0]
+
+EVALUATE TABLE: "cRUvD1Vc_gf_form_meta"___________________________[ROWS:     1][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_gf_form_meta][0]
+
+EVALUATE TABLE: "cRUvD1Vc_gf_form_revisions"______________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_gf_form_view"___________________________[ROWS:    74][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_gf_form_view][0]
+
+EVALUATE TABLE: "cRUvD1Vc_gf_rest_api_keys"_______________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_icl_content_status"_____________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_icl_core_status"________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_icl_flags"______________________________[ROWS:    65][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_icl_flags][0]
+
+EVALUATE TABLE: "cRUvD1Vc_icl_languages"__________________________[ROWS:    65][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_icl_languages][0]
+
+EVALUATE TABLE: "cRUvD1Vc_icl_languages_translations"_____________[ROWS:  4225][PG:   5][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_icl_languages_translations][0]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_icl_languages_translations][1]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_icl_languages_translations][2]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_icl_languages_translations][3]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_icl_languages_translations][4]
+
+EVALUATE TABLE: "cRUvD1Vc_icl_locale_map"_________________________[ROWS:     5][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_icl_locale_map][0]
+
+EVALUATE TABLE: "cRUvD1Vc_icl_message_status"_____________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_icl_mo_files_domains"___________________[ROWS:   204][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_icl_mo_files_domains][0]
+
+EVALUATE TABLE: "cRUvD1Vc_icl_node"_______________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_icl_reminders"__________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_icl_strings"____________________________[ROWS:    44][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_icl_strings][0]
+
+EVALUATE TABLE: "cRUvD1Vc_icl_string_batches"_____________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_icl_string_packages"____________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_icl_string_pages"_______________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_icl_string_positions"___________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_icl_string_status"______________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_icl_string_translations"________________[ROWS:     3][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_icl_string_translations][0]
+
+EVALUATE TABLE: "cRUvD1Vc_icl_string_urls"________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_icl_translate"__________________________[ROWS:    16][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_icl_translate][0]
+
+EVALUATE TABLE: "cRUvD1Vc_icl_translate_job"______________________[ROWS:     2][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_icl_translate_job][0]
+
+EVALUATE TABLE: "cRUvD1Vc_icl_translations"_______________________[ROWS:  1160][PG:   2][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_icl_translations][0]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_icl_translations][1]
+
+EVALUATE TABLE: "cRUvD1Vc_icl_translation_batches"________________[ROWS:     2][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_icl_translation_batches][0]
+
+EVALUATE TABLE: "cRUvD1Vc_icl_translation_downloads"______________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_icl_translation_status"_________________[ROWS:   703][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_icl_translation_status][0]
+
+EVALUATE TABLE: "cRUvD1Vc_links"__________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_ninja_table_items"______________________[ROWS:   229][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_ninja_table_items][0]
+
+EVALUATE TABLE: "cRUvD1Vc_options"________________________________[ROWS:   276][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_options][0]
+
+EVALUATE TABLE: "cRUvD1Vc_postmeta"_______________________________[ROWS: 20219][PG:  21][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_postmeta][0]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_postmeta][1]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_postmeta][2]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_postmeta][3]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_postmeta][4]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_postmeta][5]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_postmeta][6]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_postmeta][7]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_postmeta][8]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_postmeta][9]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_postmeta][10]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_postmeta][11]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_postmeta][12]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_postmeta][13]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_postmeta][14]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_postmeta][15]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_postmeta][16]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_postmeta][17]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_postmeta][18]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_postmeta][19]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_postmeta][20]
+
+EVALUATE TABLE: "cRUvD1Vc_posts"__________________________________[ROWS:  2050][PG:   3][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_posts][0]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_posts][1]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_posts][2]
+
+EVALUATE TABLE: "cRUvD1Vc_termmeta"_______________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_terms"__________________________________[ROWS:    23][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_terms][0]
+
+EVALUATE TABLE: "cRUvD1Vc_term_relationships"_____________________[ROWS:   145][PG:   1][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_term_taxonomy"__________________________[ROWS:    23][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_term_taxonomy][0]
+
+EVALUATE TABLE: "cRUvD1Vc_usermeta"_______________________________[ROWS:   113][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_usermeta][0]
+
+EVALUATE TABLE: "cRUvD1Vc_users"__________________________________[ROWS:     3][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_users][0]
+
+EVALUATE TABLE: "cRUvD1Vc_wfblockediplog"_________________________[ROWS:   913][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wfblockediplog][0]
+
+EVALUATE TABLE: "cRUvD1Vc_wfblocks7"______________________________[ROWS:    17][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wfblocks7][0]
+
+EVALUATE TABLE: "cRUvD1Vc_wfconfig"_______________________________[ROWS:   269][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wfconfig][0]
+
+EVALUATE TABLE: "cRUvD1Vc_wfcrawlers"_____________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_wffilechanges"__________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_wffilemods"_____________________________[ROWS: 10913][PG:  11][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wffilemods][0]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wffilemods][1]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wffilemods][2]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wffilemods][3]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wffilemods][4]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wffilemods][5]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wffilemods][6]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wffilemods][7]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wffilemods][8]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wffilemods][9]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wffilemods][10]
+
+EVALUATE TABLE: "cRUvD1Vc_wfhits"_________________________________[ROWS:  1327][PG:   2][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wfhits][0]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wfhits][1]
+
+EVALUATE TABLE: "cRUvD1Vc_wfhoover"_______________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_wfissues"_______________________________[ROWS:     3][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wfissues][0]
+
+EVALUATE TABLE: "cRUvD1Vc_wfknownfilelist"________________________[ROWS: 10913][PG:  11][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wfknownfilelist][0]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wfknownfilelist][1]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wfknownfilelist][2]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wfknownfilelist][3]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wfknownfilelist][4]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wfknownfilelist][5]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wfknownfilelist][6]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wfknownfilelist][7]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wfknownfilelist][8]
+	
+STEP-3 CHUNK STOP @ 07:49:12 - RUNTIME: 5.1276 sec. 
+
+
+	AJAX ACTION [webupdate] SUCCESS
+	-------------------------
+
+LOG-TIME[/var/www/vhosts/wirthrail.com/httpdocs/dup-installer/src/Core/Bootstrap.php:73] RESET TIME
+
+-------------------------
+AJAX ACTION [webupdate] START
+CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wfknownfilelist][9]
+CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wfknownfilelist][10]
+
+EVALUATE TABLE: "cRUvD1Vc_wflivetraffichuman"_____________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_wflocs"_________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_wflogins"_______________________________[ROWS:  1020][PG:   2][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wflogins][0]
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wflogins][1]
+
+EVALUATE TABLE: "cRUvD1Vc_wfls_2fa_secrets"_______________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_wfls_settings"__________________________[ROWS:    24][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wfls_settings][0]
+
+EVALUATE TABLE: "cRUvD1Vc_wfnotifications"________________________[ROWS:    20][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wfnotifications][0]
+
+EVALUATE TABLE: "cRUvD1Vc_wfpendingissues"________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_wfreversecache"_________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_wfsnipcache"____________________________[ROWS:     1][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wfsnipcache][0]
+
+EVALUATE TABLE: "cRUvD1Vc_wfstatus"_______________________________[ROWS:   953][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_wfstatus][0]
+
+EVALUATE TABLE: "cRUvD1Vc_wftrafficrates"_________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_yoast_indexable"________________________[ROWS:   701][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_yoast_indexable][0]
+
+EVALUATE TABLE: "cRUvD1Vc_yoast_indexable_hierarchy"______________[ROWS:   525][PG:   1][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_yoast_migrations"_______________________[ROWS:    23][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_yoast_migrations][0]
+
+EVALUATE TABLE: "cRUvD1Vc_yoast_primary_term"_____________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "cRUvD1Vc_yoast_seo_links"________________________[ROWS:     8][PG:   1][SCAN:text columns]
+	--- BASE STRINGS ---
+	SEARCH[path ]  1:"/var/www/vhosts/espressoprod.com/wirthrail.espressoprod.com" => "/var/www/vhosts/wirthrail.com/httpdocs"
+	SEARCH[urlnd]  2:"https://wirthrail.espressoprod.com" ==============> "https://wirthrail.com"
+	CHUNK ACTION: CURRENT [search_replace][cRUvD1Vc_yoast_seo_links][0]
+
+EVALUATE TABLE: "cRUvD1Vc_yoast_seo_meta"_________________________[ROWS:    26][PG:   1][SCAN:no columns  ]
+--------------------------------------
+SCANNED:	Tables:75 	|	 Rows:56970 	|	 Cells:393565 
+UPDATED:	Tables:15 	|	 Rows:26118 	|	 Cells:26458 
+ERRORS:		0 
+RUNTIME:	6.086500 sec
+CHUNK ACTION: CURRENT [rem_maintenance][][]
+
+====================================
+REMOVE MAINTENANCE MODE
+====================================
+MAINTENANCE MODE DISABLE
+CHUNK ACTION: CURRENT [rem_licenze_key][][]
+
+====================================
+REMOVE LICENSE KEY
+====================================
+CHUNK ACTION: CURRENT [config_update][][]
+SET CONFIG FILES
+Retained original entry wpconfig target:/var/www/vhosts/wirthrail.com/httpdocs/wp-config.php
+New .htaccess file created:/var/www/vhosts/wirthrail.com/httpdocs/.htaccess
+
+====================================
+CONFIGURATION FILE UPDATES
+====================================
+	UPDATE ABSPATH "dirname(__FILE__) . '/'"
+	UPDATE WP_PLUGIN_DIR "/var/www/vhosts/wirthrail.com/httpdocs/wp-content/plugins"
+	UPDATE WPMU_PLUGIN_DIR "/var/www/vhosts/wirthrail.com/httpdocs/wp-content/mu-plugins"
+	UPDATE DB_NAME ""wirthtrail_1uw8f""
+	UPDATE DB_USER "** OBSCURED **"
+	UPDATE DB_PASSWORD "** OBSCURED **"
+	UPDATE DB_HOST ""localhost""
+	UPDATE DB_CHARSET "utf8"
+	UPDATE DB_COLLATE ""
+	WP CONFIG UPDATE WP_DEBUG "false"
+	WP CONFIG UPDATE WP_AUTO_UPDATE_CORE "minor"
+	
+*** UPDATED WP CONFIG FILE ***
+
+====================================
+HTACCESS UPDATE
+====================================
+
+WEB SERVER CONFIGURATION FILE UPDATED:
+- Preparing .htaccess file with basic setup.
+HTACCESS FILE - Successfully updated the .htaccess file setting.
+
+====================================
+INDEX.PHP UPDATE
+====================================
+INDEX.PHP updated with new blog header "dirname(__FILE__) . '/wp-blog-header.php'"
+
+CHUNK ACTION: CURRENT [gen_update][][]
+
+====================================
+GENERAL UPDATES
+====================================
+
+====================================
+MANAGE PLUGINS
+====================================
+CHUNK ACTION: CURRENT [gen_clean][][]
+
+====================================
+GENERAL CLEANUP
+====================================
+ - REMOVED 0 storage items
+ - REMOVED 0 schedule items
+RESET ALL USERS SESSION TOKENS
+MIGRATION INFO SET
+CHUNK ACTION: CURRENT [create_admin][][]
+
+====================================
+RESET USERS PASSWORD
+====================================
+CHUNK ACTION: CURRENT [notice_test][][]
+
+====================================
+CHECK FOR INDEX.HTML
+====================================
+AN INDEX.HTML WAS FOUND IN THE ROOT OF THE INSTALLATION.
+
+====================================
+NOTICES TEST
+====================================
+No General Notices Found
+
+CHUNK ACTION: CURRENT [cleanup_tmp_files][][]
+
+====================================
+CLEANUP TMP FILES
+====================================
+CHUNK ACTION: CURRENT [set_files_perms][][]
+
+====================================
+SET PARAMS PERMISSION
+====================================
+
+*** SET FOLDER PERMISSION AFTER EXTRACTION
+--------------------------------------
+PATHS MAPPING : "/var/www/vhosts/wirthrail.com/httpdocs"
+--------------------------------------
+SET FOLDER PERMISSION DONE
+CHUNK ACTION: CURRENT [final_report][][]
+
+====================================
+FINAL REPORT NOTICES
+====================================
+
+STEP-3 COMPLETE @ 07:49:14 - RUNTIME: 1.8012 sec. 
+
+
+AJAX ACTION [webupdate] SUCCESS
+-------------------------
+
+LOG-TIME[/var/www/vhosts/wirthrail.com/httpdocs/dup-installer/src/Core/Bootstrap.php:73] RESET TIME
+
+-------------------------
+AJAX ACTION [finalpre] START
+AJAX ACTION [finalpre] SUCCESS
+-------------------------
+
+LOG-TIME[/var/www/vhosts/wirthrail.com/httpdocs/dup-installer/src/Core/Bootstrap.php:73] RESET TIME
+
+-------------------------
+AJAX ACTION [finalafter] START
+AJAX ACTION [finalafter] SUCCESS
+-------------------------
+
+LOG-TIME[/var/www/vhosts/wirthrail.com/httpdocs/dup-installer/src/Core/Bootstrap.php:73] RESET TIME
+
+====================================
+FINAL REPORT NOTICES LIST
+====================================
+-----------------------
+[WARNING] An index.html was found.
+	SECTIONS: general
+	LONG MSG: An index.html was found in the existing site. You may need to manually remove it for the new site to work.
+
+====================================
+LOG-TIME[/var/www/vhosts/wirthrail.com/httpdocs/dup-installer/ctrls/ctrl.base.php:228][DELTA:   0.06902]  MESSAGE:END RENDER PAGE
