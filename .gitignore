@@ -1,1 +1,3 @@
 /nbproject/private/
+wp-content/plugins/wordpress-deploy
+!wp-content/uploads
