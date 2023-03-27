@@ -1,9 +1,9 @@
 <?php
 $max_width = "";
 if (isset($setting['general']['options']['container_max_width_switch']['value']) && $setting['general']['options']['container_max_width_switch']['value'] == 'true') {
-    $max_width = $setting['general']['options']['container_max_width_switch']['childs']['container_max_width']['value'];
+    $max_width      = $setting['general']['options']['container_max_width_switch']['childs']['container_max_width']['value'];
     $tableAlignment = $setting['general']['options']['table_alignment']['value'];
-    $alignment = '';
+    $alignment      = '';
     if ($tableAlignment === 'left') {
         $alignment = 'margin-right: auto';
     } else {
@@ -31,3 +31,9 @@ if (isset($setting['general']['options']['container_max_height']['value'])) {
     ninjaTablesPrintSafeVar($ninja_table_builder_html);
     ?>
 </div>
+
+<?php
+if (is_user_logged_in() && ninja_table_admin_role()): ?>
+    <a href="<?php echo admin_url('admin.php?page=ninja_tables#/table_builder_edit_table/' . $table_id); ?>"
+       class="ntb_edit_table_class_<?php echo $table_id ?>"><?php _e('Edit Table', 'ninja-tables') ?></a>
+<?php endif; ?>

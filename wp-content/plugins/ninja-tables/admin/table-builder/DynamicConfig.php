@@ -5,6 +5,7 @@ class DynamicConfig
     public static function getTableDataInfo($data_from_db, $updated_column_properties, $updated_row_properties)
     {
         $updatedDataRow = self::getRowStyle($data_from_db, $updated_row_properties); //row style updated
+
         return self::getColumnStyle($updatedDataRow, $updated_column_properties); //column style updated
     }
 
@@ -19,6 +20,7 @@ class DynamicConfig
                 $column['style'] = array_merge($updated_column_properties, $column['style']);
             }
         }
+
         return $data;
 
     }
@@ -32,6 +34,7 @@ class DynamicConfig
             }
             $rows['style'] = array_merge($updated_row_properties, $rows['style']);
         }
+
         return $data_from_db;
     }
 
@@ -71,22 +74,22 @@ class DynamicConfig
         $static_config['border']['options']['inner_border']['childs']['inner_border_color']['value']  = $border['inner_border']['childs']['inner_border_color']['value'];
         $static_config['border']['options']['inner_border']['childs']['inner_border_size']['value']   = $border['inner_border']['childs']['inner_border_size']['value'];
 
-        $static_config['global_styling']['options']['margin_top']['value']  = $global_style['margin_top']['value'];
-        $static_config['global_styling']['options']['margin_bottom']['value']  = isset($global_style['margin_bottom']['value']) ? $global_style['margin_bottom']['value'] : 0;
-        $static_config['global_styling']['options']['font_size']['value']   = $global_style['font_size']['value'];
-        $static_config['global_styling']['options']['color']['value']       = $global_style['color']['value'];
-        $static_config['global_styling']['options']['font_family']['value'] = $global_style['font_family']['value'];
+        $static_config['global_styling']['options']['margin_top']['value']    = $global_style['margin_top']['value'];
+        $static_config['global_styling']['options']['margin_bottom']['value'] = isset($global_style['margin_bottom']['value']) ? $global_style['margin_bottom']['value'] : 0;
+        $static_config['global_styling']['options']['font_size']['value']     = $global_style['font_size']['value'];
+        $static_config['global_styling']['options']['color']['value']         = $global_style['color']['value'];
+        $static_config['global_styling']['options']['font_family']['value']   = $global_style['font_family']['value'];
 
         return $static_config;
     }
 
     public static function getResponsive($dynamic_responsive, $static_config)
     {
-        $general = $dynamic_responsive['general']['options'];
-        $mobile  = $dynamic_responsive['mode_options']['options']['devices']['mobile'];
-        $tablet  = $dynamic_responsive['mode_options']['options']['devices']['tablet'];
-        $mobileSettings  = $dynamic_responsive['responsive_settings']['options']['devices']['mobile'];
-        $tabletSettings  = $dynamic_responsive['responsive_settings']['options']['devices']['tablet'];
+        $general        = $dynamic_responsive['general']['options'];
+        $mobile         = $dynamic_responsive['mode_options']['options']['devices']['mobile'];
+        $tablet         = $dynamic_responsive['mode_options']['options']['devices']['tablet'];
+        $mobileSettings = isset($dynamic_responsive['responsive_settings']['options']['devices']['mobile']) ? $dynamic_responsive['responsive_settings']['options']['devices']['mobile'] : null;
+        $tabletSettings = isset($dynamic_responsive['responsive_settings']['options']['devices']['tablet']) ? $dynamic_responsive['responsive_settings']['options']['devices']['tablet'] : null;
 
         $static_config['general']['options']['enable_responsive_table']['value'] = $general['enable_responsive_table']['value'];
 
@@ -94,19 +97,19 @@ class DynamicConfig
         $static_config['mode_options']['options']['devices']['mobile']['top_row_as_header']['value']  = $mobile['top_row_as_header']['value'];
         $static_config['mode_options']['options']['devices']['mobile']['items_per_row']['value']      = isset($mobile['items_per_row']['value']) ? $mobile['items_per_row']['value'] : 1;
         $static_config['mode_options']['options']['devices']['mobile']['cell_border']['value']        = isset($mobile['cell_border']['value']) ? $mobile['cell_border']['value'] : 5;
-        $static_config['mode_options']['options']['devices']['mobile']['cell_direction']['value']        = isset($mobile['cell_direction']['value']) ? $mobile['cell_direction']['value'] : 'row';
+        $static_config['mode_options']['options']['devices']['mobile']['cell_direction']['value']     = isset($mobile['cell_direction']['value']) ? $mobile['cell_direction']['value'] : 'row';
 
         $static_config['mode_options']['options']['devices']['tablet']['disable_breakpoint']['value'] = $tablet['disable_breakpoint']['value'];
         $static_config['mode_options']['options']['devices']['tablet']['top_row_as_header']['value']  = $tablet['top_row_as_header']['value'];
-        $static_config['mode_options']['options']['devices']['tablet']['items_per_row']['value']      =  isset($tablet['items_per_row']['value)']) ? $tablet['items_per_row']['value'] : 2;
+        $static_config['mode_options']['options']['devices']['tablet']['items_per_row']['value']      = isset($tablet['items_per_row']['value)']) ? $tablet['items_per_row']['value'] : 2;
         $static_config['mode_options']['options']['devices']['tablet']['cell_border']['value']        = isset($tablet['cell_border']['value']) ? $tablet['cell_border']['value'] : 5;
-        $static_config['mode_options']['options']['devices']['tablet']['cell_direction']['value']        = isset($tablet['cell_direction']['value']) ? $tablet['cell_direction']['value'] : 'row';
+        $static_config['mode_options']['options']['devices']['tablet']['cell_direction']['value']     = isset($tablet['cell_direction']['value']) ? $tablet['cell_direction']['value'] : 'row';
 
         $static_config['responsive_settings']['options']['devices']['mobile']['mobile_table_alignment']['value'] = isset($mobileSettings['mobile_table_alignment']['value']) ? $mobileSettings['mobile_table_alignment']['value'] : 'center';
-        $static_config['responsive_settings']['options']['devices']['mobile']['mobile_cell_padding']['value'] = isset($mobileSettings['mobile_cell_padding']['value']) ? $mobileSettings['mobile_cell_padding']['value'] : 10;
+        $static_config['responsive_settings']['options']['devices']['mobile']['mobile_cell_padding']['value']    = isset($mobileSettings['mobile_cell_padding']['value']) ? $mobileSettings['mobile_cell_padding']['value'] : 10;
 
         $static_config['responsive_settings']['options']['devices']['tablet']['tablet_table_alignment']['value'] = isset($tabletSettings['tablet_table_alignment']['value']) ? $tabletSettings['tablet_table_alignment']['value'] : 'center';
-        $static_config['responsive_settings']['options']['devices']['tablet']['tablet_cell_padding']['value'] = isset($tabletSettings['tablet_cell_padding']['value']) ? $tabletSettings['tablet_cell_padding']['value'] : 10;
+        $static_config['responsive_settings']['options']['devices']['tablet']['tablet_cell_padding']['value']    = isset($tabletSettings['tablet_cell_padding']['value']) ? $tabletSettings['tablet_cell_padding']['value'] : 10;
 
         return $static_config;
     }

@@ -149,6 +149,7 @@ class Indexable_Post_Watcher implements Integration_Interface {
 		$this->hierarchy_repository->clear_ancestors( $indexable->id );
 		$this->link_builder->delete( $indexable );
 		$indexable->delete();
+		\do_action( 'wpseo_indexable_deleted', $indexable );
 	}
 
 	/**
@@ -249,7 +250,7 @@ class Indexable_Post_Watcher implements Integration_Interface {
 		if ( $author_indexable->has_public_posts === false ) {
 			$cleanup_not_yet_scheduled = ! \wp_next_scheduled( Cleanup_Integration::START_HOOK );
 			if ( $cleanup_not_yet_scheduled ) {
-				\wp_schedule_single_event( ( time() + ( MINUTE_IN_SECONDS * 5 ) ), Cleanup_Integration::START_HOOK );
+				\wp_schedule_single_event( ( \time() + ( \MINUTE_IN_SECONDS * 5 ) ), Cleanup_Integration::START_HOOK );
 			}
 		}
 	}
@@ -263,8 +264,11 @@ class Indexable_Post_Watcher implements Integration_Interface {
 		$related_indexables = $this->get_related_indexables( $post );
 
 		foreach ( $related_indexables as $indexable ) {
-			$indexable->object_last_modified = \max( $indexable->object_last_modified, $post->post_modified_gmt );
-			$indexable->save();
+			// Ignore everything that is not an actual indexable.
+			if ( \is_a( $indexable, Indexable::class ) ) {
+				$indexable->object_last_modified = \max( $indexable->object_last_modified, $post->post_modified_gmt );
+				$indexable->save();
+			}
 		}
 	}
 
