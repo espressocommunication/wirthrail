@@ -95,3 +95,7 @@ function understrap_all_excerpts_get_more_link( $post_excerpt ) {
     return $post_excerpt;
 }
 
+if(function_exists("acf_add_options_sub_page")) {
+	// List of options page
+        acf_add_options_sub_page('Contact');
+}

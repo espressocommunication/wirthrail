@@ -10,7 +10,7 @@ defined( 'ABSPATH' ) || exit;
 				<div class="col-sm-7 col-md-6 navigation">
 					<div class="row">
 						<div class="col-sm-5 col-md-4">
-							<h6>Navigation</h6>
+							<h6><?php echo __('Navigation', 'esp'); ?></h6>
 							<?php wp_nav_menu(
 								array(
 									'theme_location'	=> 'footer-navigation',
@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 
 						</div>
 						<div class="col-sm-7 col-md-8 rails">
-							<h6>Rails</h6>
+							<h6><?php echo __('Rails', 'esp'); ?></h6>
 							<div class="row">
 								<div class="col-md-6">
 									<?php wp_nav_menu(
@@ -49,23 +49,26 @@ defined( 'ABSPATH' ) || exit;
 				<div class="col-sm-5 col-md-6 coordonnees">
 					<div class="row">
 						<div class="col-md-12">
-							<h6>Address</h6>
+							<h6><?php echo __('Address', 'esp'); ?></h6>
 								<div class="row">
 									<div class="col-md-7 adresse">
-										M.F. Wirth Rail Corporation<br />
-										740 Notre-Dame Street West<br />
-										Suite 1240<br />
-										Montréal&nbsp;(QC)&nbsp;&nbsp;H3C&nbsp;3X6<br />
-										Canada<br /><br />
-										Wirth Rail America Inc.<br />
-										PO Box 4845<br />
-										Harrisburg, PA 17111<br />
-										USA
+                                                                            <?php if(get_field('address','options')){ ?>
+                                                                            <?php echo get_field('address','options'); ?>
+                                                                            <?php } ?>
 									</div>
 									<div class="col-md-5 telephone">
-										<a href="tel:+18669099133">+1&nbsp;866&nbsp;909-9113</a><br />
-										<a href="tel:+15143697245">+1&nbsp;514&nbsp;369-7245</a><br />
-										<a href="mailto:info@wirthrail.com">info@wirthrail.com</a><br /><br />
+                                                                                <?php 
+                                                                                $tels = get_field('tel','options');
+                                                                                if( $tels ) {
+                                                                                    foreach( $tels as $tel ) { ?>
+                                                                                        <a href="tel:<?php echo $tel['number']; ?>"><?php echo $tel['number']; ?></a><br />
+                                                                                    <?php }
+                                                                                }
+                                                                                ?>
+                                                                                <?php if(get_field('email','options')){ ?>
+                                                                                <a href="mailto:<?php echo get_field('email','options'); ?>"><?php echo get_field('email','options'); ?></a><br /><br />
+                                                                                <?php } ?>
+										
 										<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/carbon-care-enviro-access.png" alt="CARBON CARE &bull; ENVIRO-ACCESS" />
 									</div>
 								</div>
