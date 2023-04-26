@@ -15,6 +15,7 @@ add_action( 'wp_enqueue_scripts', 'understrap_remove_scripts', 20 );
 function theme_enqueue_styles() {
 	$the_theme = wp_get_theme();
     wp_enqueue_style( 'child-understrap-styles', get_stylesheet_directory_uri() . '/css/child-theme.css', array(), $the_theme->get( 'Version' ) );
+    wp_enqueue_style( 'esp-styles', get_stylesheet_directory_uri() . '/css/esp-styles.css', array(), $the_theme->get( 'Version' ) );
     wp_enqueue_script( 'jquery');
     wp_enqueue_script( 'child-understrap-scripts', get_stylesheet_directory_uri() . '/js/child-theme.min.js', array(), $the_theme->get( 'Version' ), true );
     wp_enqueue_script( 'my-js', get_stylesheet_directory_uri() . '/js/my.js', array(), $the_theme->get( 'Version' ), true );
