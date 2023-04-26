@@ -30,8 +30,6 @@ and open the template in the editor.
   margin: 8rem 0; }
 
 #main-menu .dropdown-menu {
-  left: auto;
-  right: 0;
   width: 240px; }
   #main-menu .dropdown-menu li {
     width: 240px; }
