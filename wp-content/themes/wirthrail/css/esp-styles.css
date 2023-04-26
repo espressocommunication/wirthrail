@@ -72,6 +72,24 @@ body, html {
 
   .dropdown .dropdown:hover > .dropdown-menu li a {
     padding: 0.75rem !important;
-    background-image: none !important; } }
+    background-image: none !important; }
+
+  .page-template-about #entete {
+    height: 570px; }
+    .page-template-about #entete:before {
+      height: 584px; }
+    .page-template-about #entete .container .row .content-area .contenu .titre {
+      font-size: 3.5rem;
+      line-height: 1;
+      margin: 1.25rem 0 3rem; }
+  .page-template-about #intro {
+    padding: 4rem 0; }
+  .page-template-about #qualite .container {
+    padding-top: 4rem;
+    padding-bottom: 4rem; }
+    .page-template-about #qualite .container .un .droite img {
+      width: 100%;
+      object-fit: cover;
+      top: 15%; } }
 
 /*# sourceMappingURL=esp-styles.css.map */

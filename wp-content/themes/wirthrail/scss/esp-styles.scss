@@ -149,4 +149,46 @@ body, html {
             }
         }
     }
+    .page-template-about {
+        #entete {
+            height: 570px;
+            
+            &:before {
+                height:584px;
+            }
+            
+            .container {
+                .row {
+                    .content-area {
+                        .contenu {
+                            .titre {
+                                font-size: 3.5rem;
+                                line-height: 1;
+                                margin: 1.25rem 0 3rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #intro {
+            padding: 4rem 0;
+        }
+        #qualite  {
+            .container {
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+                
+                .un {
+                    .droite {
+                        img {
+                            width: 100%;
+                            object-fit: cover;
+                            top:15%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
