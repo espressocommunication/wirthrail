@@ -68,8 +68,14 @@ defined( 'ABSPATH' ) || exit;
                                                                                 <?php if(get_field('email','options')){ ?>
                                                                                 <a href="mailto:<?php echo get_field('email','options'); ?>"><?php echo get_field('email','options'); ?></a><br /><br />
                                                                                 <?php } ?>
+                                                                                
+                                                                                <?php if(get_field('logo-carbon-neutral','options')){ ?>
+                                                                                    <img src="<?php echo get_field('logo-carbon-neutral','options')['sizes']['medium']; ?>" alt="CARBON CARE &bull; ENVIRO-ACCESS" />
+                                                                                <?php } else { ?>
+                                                                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/carbon-care-enviro-access.png" alt="CARBON CARE &bull; ENVIRO-ACCESS" />
+                                                                                <?php } ?>
 										
-										<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/carbon-care-enviro-access.png" alt="CARBON CARE &bull; ENVIRO-ACCESS" />
+										
 									</div>
 								</div>
 							</div>
