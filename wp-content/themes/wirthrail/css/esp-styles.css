@@ -31,9 +31,14 @@ and open the template in the editor.
 
 #main-menu .dropdown-menu {
   left: auto;
-  right: 0; }
+  right: 0;
+  width: 240px; }
+  #main-menu .dropdown-menu li {
+    width: 240px; }
 #main-menu .dropdown .dropdown:hover > .dropdown-menu {
   left: 100% !important; }
+#main-menu .dropdown-item {
+  white-space: inherit; }
 
 @media (min-width: 768px) {
   .page-template-accueil #entete .container .row .content-area .contenu .titre {
@@ -58,6 +63,13 @@ and open the template in the editor.
   #main-menu > li > a {
     font-size: 15px;
     padding-left: 7px;
-    padding-right: 7px; } }
+    padding-right: 7px; }
+
+  #main-menu > li ul li.allproducts a {
+    padding: 1.5rem !important; }
+
+  .dropdown .dropdown:hover > .dropdown-menu li a {
+    padding: 0.75rem !important;
+    background-image: none !important; } }
 
 /*# sourceMappingURL=esp-styles.css.map */

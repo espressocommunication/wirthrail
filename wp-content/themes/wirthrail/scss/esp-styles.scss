@@ -52,6 +52,11 @@ and open the template in the editor.
     .dropdown-menu {
         left:auto;
         right:0;
+        width: 240px;
+        
+        li {
+            width: 240px;
+        }
     }
     .dropdown {
         .dropdown:hover  {
@@ -59,6 +64,9 @@ and open the template in the editor.
                 left:100% !important;
             }
         }
+    }
+    .dropdown-item {
+        white-space: inherit;
     }
 }
 
@@ -122,5 +130,20 @@ and open the template in the editor.
         font-size: 15px;
         padding-left: 7px;
         padding-right: 7px;
+    }
+    #main-menu > li ul li.allproducts a {
+        padding:1.5rem !important;
+    }
+    .dropdown {
+        .dropdown:hover  {
+            > .dropdown-menu {
+                li {
+                    a {
+                        padding: 0.75rem !important;
+                        background-image: none !important;
+                    }
+                }
+            }
+        }
     }
 }
