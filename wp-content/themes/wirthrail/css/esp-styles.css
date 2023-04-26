@@ -19,5 +19,33 @@ and open the template in the editor.
     left: -100%;
     display: block;
     background: white; }
+  .page-template-accueil #nouvelles .container .items .item img {
+    position: relative;
+    z-index: 30; }
+.page-template-accueil #clients {
+  display: none; }
+  .page-template-accueil #clients .container {
+    display: inherit; }
+.page-template-accueil #tele {
+  margin: 8rem 0; }
+
+@media (min-width: 768px) {
+  .page-template-accueil #entete .container .row .content-area .contenu .titre {
+    font-size: 3.4rem;
+    line-height: 1;
+    margin: 1rem 0 2.5rem; }
+  .page-template-accueil #intro {
+    padding: 4rem 0; }
+    .page-template-accueil #intro .container .row .duction .contenu .titre {
+      font-size: 2.5rem; }
+  .page-template-accueil #tele {
+    margin: 4rem 0; }
+    .page-template-accueil #tele .container .row .chargement .contenu {
+      padding: 0 30px; }
+
+  #main-menu > li > a {
+    font-size: 15px;
+    padding-left: 7px;
+    padding-right: 7px; } }
 
 /*# sourceMappingURL=esp-styles.css.map */

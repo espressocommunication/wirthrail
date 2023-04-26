@@ -26,6 +26,77 @@ and open the template in the editor.
                 display: block;
                 background: white;
             }
+            
+            .items {
+                .item {
+                    img {
+                        position:relative;
+                        z-index:30;
+                    }
+                }
+            }
         }
+    }
+    #clients {
+        display:none;
+        .container {
+            display: inherit;
+        }
+    }
+    #tele {
+        margin:8rem 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .page-template-accueil {
+        #entete {
+            .container{
+                .row {
+                    .content-area {
+                        .contenu {
+                            .titre {
+                                font-size: 3.4rem;
+                                line-height: 1;
+                                margin: 1rem 0 2.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #intro {
+            padding: 4rem 0;
+            
+            .container {
+                .row {
+                    .duction {
+                        .contenu {
+                            .titre {
+                                font-size: 2.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #tele {
+            margin:4rem 0;
+            
+            .container {
+                .row {
+                    .chargement {
+                        .contenu {
+                            padding:0 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #main-menu > li > a {
+        font-size: 15px;
+        padding-left: 7px;
+        padding-right: 7px;
     }
 }
