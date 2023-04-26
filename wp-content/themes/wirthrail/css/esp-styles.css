@@ -29,6 +29,12 @@ and open the template in the editor.
 .page-template-accueil #tele {
   margin: 8rem 0; }
 
+#main-menu .dropdown-menu {
+  left: auto;
+  right: 0; }
+#main-menu .dropdown .dropdown:hover > .dropdown-menu {
+  left: 100% !important; }
+
 @media (min-width: 768px) {
   .page-template-accueil #entete .container .row .content-area .contenu .titre {
     font-size: 3.4rem;
@@ -37,11 +43,17 @@ and open the template in the editor.
   .page-template-accueil #intro {
     padding: 4rem 0; }
     .page-template-accueil #intro .container .row .duction .contenu .titre {
-      font-size: 2.5rem; }
+      font-size: 2.5rem;
+      line-height: 1; }
   .page-template-accueil #tele {
     margin: 4rem 0; }
     .page-template-accueil #tele .container .row .chargement .contenu {
       padding: 0 30px; }
+      .page-template-accueil #tele .container .row .chargement .contenu a {
+        width: 238px;
+        text-align: center; }
+      .page-template-accueil #tele .container .row .chargement .contenu .titre {
+        line-height: 1; }
 
   #main-menu > li > a {
     font-size: 15px;
