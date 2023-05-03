@@ -92,6 +92,10 @@ body, html {
       object-fit: cover;
       top: 15%; } }
 @media (max-width: 600px) {
+  .page-template-about #qualite .container {
+    padding-top: 30px;
+    padding-bottom: 30px; }
+
   .page-template-about #qualite .container .deux .gauche img {
     width: 75%; }
 
