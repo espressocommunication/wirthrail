@@ -7,7 +7,7 @@ defined( 'ABSPATH' ) || exit;
 	<div class="wrapper" id="wrapper-footer-nav">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-7 col-md-6 navigation">
+				<div class="col-sm-7 col-md-12 navigation">
 					<div class="row">
 						<div class="col-sm-5 col-md-4">
 							<h6><?php echo __('Navigation', 'esp'); ?></h6>
@@ -46,7 +46,7 @@ defined( 'ABSPATH' ) || exit;
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-5 col-md-6 coordonnees">
+				<div class="col-sm-5 col-md-12 coordonnees">
 					<div class="row">
 						<div class="col-md-12">
 							<h6><?php echo __('Address', 'esp'); ?></h6>

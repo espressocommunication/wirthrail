@@ -88,7 +88,7 @@ while ( have_posts() ) : the_post();
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-md-5 col-lg-4 visuel"><a href="<?php the_field('telechargement_url_bouton'); ?>" title="<?php the_field('telechargement_libelle_bouton'); ?>" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/wirth-rail-catalog.jpg" alt="Wirth Rail catalog" /></a></div>
-				<div class="col-sm-6 col-md-5 col-lg-4 chargement">
+				<div class="col-sm-6 col-md-6 col-lg-4 chargement">
 					<div class="contenu">
 						<h2 class="titre"><?php the_field('telechargement_titre'); ?></h2>
 						<div class="texte"><?php the_field('telechargement_texte'); ?></div>
