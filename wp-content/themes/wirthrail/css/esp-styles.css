@@ -108,7 +108,7 @@ body, html {
 
   .page-template-accueil #entete::before,
   .page-template-about #entete::before {
-    display: block;
+    display: block !important;
     position: relative;
     width: 93%;
     height: 265px; }
