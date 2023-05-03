@@ -205,4 +205,17 @@ body, html {
     .cky-consent-container .cky-consent-bar .cky-notice {
         padding-left:0 !important;
     }
+    .cky-consent-container .cky-consent-bar .cky-notice .cky-notice-group .cky-notice-btn-wrapper .cky-btn {
+        margin:5px 0 !important;
+    }
+    .page-template-accueil #entete::before {
+        display: block;
+        position: relative;
+        width: 70%;
+        height: 355px;
+    }
+    .page-template-accueil #entete .container {
+        height:auto;
+        margin-top:30px;
+    }
 }
