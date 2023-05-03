@@ -108,6 +108,9 @@ body, html {
       width: 100%;
       height: 100%; }
 
+  .page-template-about #citation .container .row .content-area {
+    z-index: 2; }
+
   .cky-consent-container .cky-consent-bar .cky-notice .cky-notice-group {
     display: block; }
 
