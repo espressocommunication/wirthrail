@@ -73,7 +73,7 @@ body, html {
     }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .page-template-accueil {
         #entete {
             .container{
@@ -211,11 +211,21 @@ body, html {
     .page-template-accueil #entete::before {
         display: block;
         position: relative;
-        width: 70%;
-        height: 355px;
+        width: 93%;
+        height: 265px;
     }
     .page-template-accueil #entete .container {
         height:auto;
         margin-top:30px;
+    }
+    .page-template-accueil #entete .container .row .content-area .contenu .titre {
+        font-size: 50px;
+        line-height: 1;
+        margin: 14px 0 30px;
+    }
+    .page-template-accueil #entete {
+        height: auto;
+        padding-bottom: 35px;
+        border-bottom:none;
     }
 }
