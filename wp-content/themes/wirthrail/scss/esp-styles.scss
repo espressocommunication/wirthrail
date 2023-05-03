@@ -192,3 +192,14 @@ body, html {
         }
     }
 }
+
+@media(max-width:600px) {
+    .cky-consent-container .cky-consent-bar .cky-notice .cky-notice-group {
+        display: block;
+    }
+    .cky-consent-container .cky-consent-bar .cky-notice .cky-notice-group .cky-notice-des,
+    .cky-consent-container .cky-consent-bar .cky-notice .cky-notice-group .cky-notice-btn-wrapper{
+        max-width: 100%;
+        width:100%;
+    }
+}
