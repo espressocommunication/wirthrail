@@ -194,8 +194,25 @@ body, html {
 }
 
 @media(max-width:600px) {
+    .page-template-about #qualite .container .deux .gauche img {
+        width:75%
+    }
     .page-template-about #intro .container .row .duction .contenu {
         padding:0;
+    }
+    .page-template-about #qualite .container .deux .gauche img {
+        width: 75%;
+        right: initial;
+        top: -5rem;
+        left: 15px;
+    }
+    .page-template-about #qualite .container .deux .droite img {
+        width: 55%;
+        margin-right: 0;
+        margin-top: 70px;
+    }
+    .page-template-about #qualite .container .deux {
+        margin-top: 30px;
     }
     .page-template-about #citation {
         height: 330px;
