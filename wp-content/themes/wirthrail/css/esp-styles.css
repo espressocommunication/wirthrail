@@ -98,6 +98,9 @@ body, html {
   .cky-consent-container .cky-consent-bar .cky-notice .cky-notice-group .cky-notice-des,
   .cky-consent-container .cky-consent-bar .cky-notice .cky-notice-group .cky-notice-btn-wrapper {
     max-width: 100%;
-    width: 100%; } }
+    width: 100%; }
+
+  .cky-consent-container .cky-consent-bar .cky-notice {
+    padding-left: 0 !important; } }
 
 /*# sourceMappingURL=esp-styles.css.map */
