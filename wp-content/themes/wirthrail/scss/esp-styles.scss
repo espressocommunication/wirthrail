@@ -194,6 +194,65 @@ body, html {
 }
 
 @media(max-width:600px) {
+    .page-template-contact #contact .container .row .contenant .contenu {
+        padding: 35px 0 0 0;
+    }
+    .page-template-contact #contact .container .row .contenant .contenu .titre {
+        margin-bottom:30px;
+    }
+    .page-template-contact #contact .container .row .contenant .contenu .formulaire {
+        padding-right: 15px;
+    }
+    .gform_wrapper.gravity-theme .gform_footer, .gform_wrapper.gravity-theme .gform_page_footer {
+        margin: 0 0 20px;
+        padding: 0;
+    }
+    .page-template-contact #contact .container .row .contenant .contenu .formulaire input[type=submit] {
+        margin:0;
+    }
+
+    .page-template-about #qualite .container {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    } 
+    .page-template-about #qualite .container .deux .gauche img {
+        width:75%
+    }
+    .page-template-about #intro .container .row .duction .contenu {
+        padding:0;
+    }
+    .page-template-about #qualite .container .deux .gauche img {
+        width: 75%;
+        right: initial;
+        top: -5rem;
+        left: 15px;
+    }
+    .page-template-about #qualite .container .deux .droite img {
+        width: 55%;
+        margin-right: 0;
+        margin-top: 70px;
+    }
+    .page-template-about #qualite .container .deux {
+        margin-top: 30px;
+    }
+    .page-template-about #citation {
+        height: 330px;
+        position:relative;
+        
+        &:after {
+            content: '';
+            position:absolute;
+            background: black;
+            opacity: 0.5;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .page-template-about #citation .container .row .content-area {
+        z-index:2;
+    }
     .cky-consent-container .cky-consent-bar .cky-notice .cky-notice-group {
         display: block;
     }
@@ -208,27 +267,101 @@ body, html {
     .cky-consent-container .cky-consent-bar .cky-notice .cky-notice-group .cky-notice-btn-wrapper .cky-btn {
         margin:5px 0 !important;
     }
-    .page-template-accueil #entete::before {
-        display: block;
+    .page-template-accueil #entete::before,
+    .page-template-about #entete::before {
+        display: block !important;
         position: relative;
         width: 93%;
         height: 265px;
     }
-    .page-template-accueil #entete .container {
+    
+    .page-template-accueil #entete .container,
+    .page-template-about #entete .container  {
         height:auto;
         margin-top:45px;
     }
-    .page-template-accueil #entete .container .row .content-area .contenu .titre {
+    .page-template-accueil #entete .container .row .content-area .contenu .titre,
+    .page-template-about #entete .container .row .content-area .contenu .titre {
         font-size: 50px;
         line-height: 1;
         margin: 14px 0 30px;
     }
-    .page-template-accueil #entete {
+    .page-template-accueil #entete,
+    .page-template-about #entete{
         height: auto;
         padding-bottom: 45px;
         border-bottom:none;
     }
-    .page-template-accueil #intro {
+    .page-template-accueil #intro,
+    .page-template-about #intro {
+        padding: 20px 0;
+    }
+    .page-template-accueil #nouvelles-entete {
+        padding-top: 20px;
+    }
+    .page-template-accueil #nouvelles .container .items .item {
+        padding-bottom: 30px;
+    }
+    .page-template-accueil #nouvelles {
+        background-size: 100%;
+        background-position: center bottom;
+        padding-bottom: 175px;
+    }
+    .page-template-accueil #tele .container .row .chargement .contenu {
+        padding: 20px 0 0;
+    }
+    .page-template-contact #contact {
+    padding-bottom: 30px;
+}
+}
+@media(max-width:576px) {
+    .page-template-contact #contact .container .row .contenant .contenu {
+        padding: 35px 0 0 0;
+    }
+    .page-template-contact #contact {
+    padding-bottom: 30px;
+}
+    .cky-consent-container .cky-consent-bar .cky-notice .cky-notice-group {
+        display: block;
+    }
+    .cky-consent-container .cky-consent-bar .cky-notice .cky-notice-group .cky-notice-des,
+    .cky-consent-container .cky-consent-bar .cky-notice .cky-notice-group .cky-notice-btn-wrapper{
+        max-width: 100%;
+        width:100%;
+    }
+    .cky-consent-container .cky-consent-bar .cky-notice {
+        padding-left:0 !important;
+    }
+    .cky-consent-container .cky-consent-bar .cky-notice .cky-notice-group .cky-notice-btn-wrapper .cky-btn {
+        margin:5px 0 !important;
+    }
+    .page-template-accueil #entete::before,
+    .page-template-about #entete::before {
+        display: block !important;
+        position: relative;
+        width: 93%;
+        height: 265px;
+    }
+    
+    .page-template-accueil #entete .container,
+    .page-template-about #entete .container  {
+        height:auto;
+        margin-top:45px;
+    }
+    .page-template-accueil #entete .container .row .content-area .contenu .titre,
+    .page-template-about #entete .container .row .content-area .contenu .titre {
+        font-size: 50px;
+        line-height: 1;
+        margin: 14px 0 30px;
+    }
+    .page-template-accueil #entete,
+    .page-template-about #entete{
+        height: auto;
+        padding-bottom: 45px;
+        border-bottom:none;
+    }
+    .page-template-accueil #intro,
+    .page-template-about #intro {
         padding: 20px 0;
     }
     .page-template-accueil #nouvelles-entete {
@@ -246,3 +379,4 @@ body, html {
         padding: 20px 0 0;
     }
 }
+
