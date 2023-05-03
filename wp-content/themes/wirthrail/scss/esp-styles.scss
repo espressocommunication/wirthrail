@@ -208,7 +208,8 @@ body, html {
     .cky-consent-container .cky-consent-bar .cky-notice .cky-notice-group .cky-notice-btn-wrapper .cky-btn {
         margin:5px 0 !important;
     }
-    .page-template-accueil #entete::before {
+    .page-template-accueil #entete::before,
+    .page-template-about #entete::before {
         display: block;
         position: relative;
         width: 93%;
