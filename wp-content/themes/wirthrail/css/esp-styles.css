@@ -96,7 +96,8 @@ body, html {
     padding: 0; }
 
   .page-template-about #citation {
-    height: 330px; }
+    height: 330px;
+    position: relative; }
     .page-template-about #citation:after {
       content: '';
       position: absolute;
