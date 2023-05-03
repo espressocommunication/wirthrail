@@ -113,21 +113,25 @@ body, html {
     width: 93%;
     height: 265px; }
 
-  .page-template-accueil #entete .container {
+  .page-template-accueil #entete .container,
+  .page-template-about #entete .container {
     height: auto;
     margin-top: 45px; }
 
-  .page-template-accueil #entete .container .row .content-area .contenu .titre {
+  .page-template-accueil #entete .container .row .content-area .contenu .titre,
+  .page-template-about #entete .container .row .content-area .contenu .titre {
     font-size: 50px;
     line-height: 1;
     margin: 14px 0 30px; }
 
-  .page-template-accueil #entete {
+  .page-template-accueil #entete,
+  .page-template-about #entete {
     height: auto;
     padding-bottom: 45px;
     border-bottom: none; }
 
-  .page-template-accueil #intro {
+  .page-template-accueil #intro,
+  .page-template-about #intro {
     padding: 20px 0; }
 
   .page-template-accueil #nouvelles-entete {
@@ -165,21 +169,25 @@ body, html {
     width: 93%;
     height: 265px; }
 
-  .page-template-accueil #entete .container {
+  .page-template-accueil #entete .container,
+  .page-template-about #entete .container {
     height: auto;
     margin-top: 45px; }
 
-  .page-template-accueil #entete .container .row .content-area .contenu .titre {
+  .page-template-accueil #entete .container .row .content-area .contenu .titre,
+  .page-template-about #entete .container .row .content-area .contenu .titre {
     font-size: 50px;
     line-height: 1;
     margin: 14px 0 30px; }
 
-  .page-template-accueil #entete {
+  .page-template-accueil #entete,
+  .page-template-about #entete {
     height: auto;
     padding-bottom: 45px;
     border-bottom: none; }
 
-  .page-template-accueil #intro {
+  .page-template-accueil #intro,
+  .page-template-about #intro {
     padding: 20px 0; }
 
   .page-template-accueil #nouvelles-entete {
