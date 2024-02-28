@@ -1,11 +1,11 @@
-/******/ (function() { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/advanced-custom-fields-pro/assets/src/js/pro/_acf-field-flexible-content.js":
 /*!*****************************************************************************************!*\
   !*** ./src/advanced-custom-fields-pro/assets/src/js/pro/_acf-field-flexible-content.js ***!
   \*****************************************************************************************/
-/***/ (function() {
+/***/ (() => {
 
 (function ($) {
   var Field = acf.Field.extend({
@@ -51,26 +51,17 @@
       return this.$('.tmpl-popup:last');
     },
     getPopupHTML: function () {
-      // vars
       var html = this.$popup().html();
       var $html = $(html);
-
-      // count layouts
-      var $layouts = this.$layouts();
-      var countLayouts = function (name) {
-        return $layouts.filter(function () {
-          return $(this).data('layout') === name;
-        }).length;
-      };
+      var self = this;
 
       // modify popup
       $html.find('[data-layout]').each(function () {
-        // vars
         var $a = $(this);
         var min = $a.data('min') || 0;
         var max = $a.data('max') || 0;
         var name = $a.data('layout') || '';
-        var count = countLayouts(name);
+        var count = self.countLayouts(name);
 
         // max
         if (max && count >= max) {
@@ -80,7 +71,6 @@
 
         // min
         if (min && count < min) {
-          // vars
           var required = min - count;
           var title = acf.__('{required} {label} {identifier} required (min {min})');
           var identifier = acf._n('layout', 'layouts', required);
@@ -98,8 +88,6 @@
 
       // update
       html = $html.outerHTML();
-
-      // return
       return html;
     },
     getValue: function () {
@@ -139,7 +127,6 @@
       });
     },
     addCollapsed: function () {
-      // vars
       var indexes = preference.load(this.get('key'));
 
       // bail early if no collapsed
@@ -205,29 +192,48 @@
       // - this is just for fields like google_map to render itself
       acf.doAction('show_fields', fields);
     },
+    countLayouts: function (name) {
+      return this.$layouts().filter(function () {
+        return $(this).data('layout') === name;
+      }).length;
+    },
+    countLayoutsByName: function (currentLayout) {
+      const layoutMax = currentLayout.data('max');
+      if (!layoutMax) {
+        return true;
+      }
+      const name = currentLayout.data('layout') || '';
+      const count = this.countLayouts(name);
+      if (count >= layoutMax) {
+        let text = acf.__('This field has a limit of {max} {label} {identifier}');
+        const identifier = acf._n('layout', 'layouts', layoutMax);
+        const layoutLabel = '"' + currentLayout.data('label') + '"';
+        text = text.replace('{max}', layoutMax);
+        text = text.replace('{label}', layoutLabel);
+        text = text.replace('{identifier}', identifier);
+        this.showNotice({
+          text: text,
+          type: 'warning'
+        });
+        return false;
+      }
+      return true;
+    },
     validateAdd: function () {
       // return true if allowed
       if (this.allowAdd()) {
         return true;
       }
-
-      // vars
       var max = this.get('max');
       var text = acf.__('This field has a limit of {max} {label} {identifier}');
       var identifier = acf._n('layout', 'layouts', max);
-
-      // replace
       text = text.replace('{max}', max);
       text = text.replace('{label}', '');
       text = text.replace('{identifier}', identifier);
-
-      // add notice
       this.showNotice({
         text: text,
         type: 'warning'
       });
-
-      // return
       return false;
     },
     onClickAdd: function (e, $el) {
@@ -304,18 +310,21 @@
 
       // trigger change for validation errors
       this.$input().trigger('change');
-
-      // return
       return $el;
     },
     onClickDuplicate: function (e, $el) {
+      var $layout = $el.closest('.layout');
+      // Validate each layout's max count.
+      if (!this.countLayoutsByName($layout.first())) {
+        return false;
+      }
+
       // Validate with warning.
       if (!this.validateAdd()) {
         return false;
       }
 
       // get layout and duplicate it.
-      var $layout = $el.closest('.layout');
       this.duplicateLayout($layout);
     },
     duplicateLayout: function ($layout) {
@@ -323,8 +332,6 @@
       if (!this.allowAdd()) {
         return false;
       }
-
-      // Vars.
       var fieldKey = this.get('key');
 
       // Duplicate layout.
@@ -366,8 +373,6 @@
       if (this.allowRemove()) {
         return true;
       }
-
-      // vars
       var min = this.get('min');
       var text = acf.__('This field requires at least {min} {label} {identifier}');
       var identifier = acf._n('layout', 'layouts', min);
@@ -382,8 +387,6 @@
         text: text,
         type: 'warning'
       });
-
-      // return
       return false;
     },
     onClickRemove: function (e, $el) {
@@ -413,8 +416,6 @@
     removeLayout: function ($layout) {
       // reference
       var self = this;
-
-      // vars
       var endHeight = this.getValue() == 1 ? 60 : 0;
 
       // remove
@@ -431,7 +432,6 @@
       });
     },
     onClickCollapse: function (e, $el) {
-      // vars
       var $layout = $el.closest('.layout');
 
       // toggle
@@ -457,7 +457,6 @@
       this.renderLayout($layout);
     },
     renderLayout: function ($layout) {
-      // vars
       var $input = $layout.children('input');
       var prefix = $input.attr('name').replace('[acf_fc_layout]', '');
 
@@ -484,7 +483,6 @@
       });
     },
     onUnload: function () {
-      // vars
       var indexes = [];
 
       // loop
@@ -564,7 +562,6 @@
   var preference = new acf.Model({
     name: 'this.collapsedLayouts',
     key: function (key, context) {
-      // vars
       var count = this.get(key + context) || 0;
 
       // update
@@ -575,16 +572,11 @@
       if (count > 1) {
         key += '-' + count;
       }
-
-      // return
       return key;
     },
     load: function (key) {
-      // vars
       var key = this.key(key, 'load');
       var data = acf.getPreference(this.name);
-
-      // return
       if (data && data[key]) {
         return data[key];
       } else {
@@ -592,7 +584,6 @@
       }
     },
     save: function (key, value) {
-      // vars
       var key = this.key(key, 'save');
       var data = acf.getPreference(this.name) || {};
 
@@ -622,7 +613,7 @@
 /*!********************************************************************************!*\
   !*** ./src/advanced-custom-fields-pro/assets/src/js/pro/_acf-field-gallery.js ***!
   \********************************************************************************/
-/***/ (function() {
+/***/ (() => {
 
 (function ($) {
   var Field = acf.Field.extend({
@@ -1187,7 +1178,7 @@
 /*!*********************************************************************************!*\
   !*** ./src/advanced-custom-fields-pro/assets/src/js/pro/_acf-field-repeater.js ***!
   \*********************************************************************************/
-/***/ (function() {
+/***/ (() => {
 
 (function ($) {
   var Field = acf.Field.extend({
@@ -1358,8 +1349,7 @@
       // render
       this.render();
     },
-    render: function () {
-      let update_order_numbers = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+    render: function (update_order_numbers = true) {
       // Update order number.
       if (update_order_numbers) {
         this.$rows().each(function (i) {
@@ -1397,9 +1387,8 @@
       //	$control.removeClass('-min');
       //}
     },
-
     listenForSavedMetaBoxes: function () {
-      if (!acf.isGutenberg() || !this.get('pagination')) {
+      if (!acf.isGutenbergPostEditor() || !this.get('pagination')) {
         return;
       }
       let checkedMetaBoxes = true;
@@ -1613,7 +1602,7 @@
 
       // vars
       var min = this.get('min');
-      var text = acf.__('Minimum rows reached ({min} rows)');
+      var text = acf.__('Minimum rows not reached ({min} rows)');
 
       // replace
       text = text.replace('{min}', min);
@@ -1664,8 +1653,7 @@
     onBlurRowOrder: function (e, $el) {
       this.onChangeRowOrder(e, $el, false);
     },
-    onChangeRowOrder: function (e, $el) {
-      let update = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+    onChangeRowOrder: function (e, $el, update = true) {
       if (!this.get('pagination')) {
         return;
       }
@@ -1733,7 +1721,6 @@
         }
       });
     },
-
     isCollapsed: function ($row) {
       return $row.hasClass('-collapsed');
     },
@@ -1806,8 +1793,7 @@
       }
       this.updateRowStatus($row, 'changed');
     },
-    updateRowStatus: function ($row, status) {
-      let data = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+    updateRowStatus: function ($row, status, data = true) {
       if (!this.get('pagination')) {
         return;
       }
@@ -1883,8 +1869,7 @@
         }
       });
     },
-    ajaxLoadPage: function () {
-      let clearChanged = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+    ajaxLoadPage: function (clearChanged = false) {
       const ajaxData = acf.prepareForAjax({
         action: 'acf/ajax/query_repeater',
         paged: this.page,
@@ -2068,49 +2053,49 @@
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
-/******/ 	!function() {
+/******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = function(module) {
+/******/ 		__webpack_require__.n = (module) => {
 /******/ 			var getter = module && module.__esModule ?
-/******/ 				function() { return module['default']; } :
-/******/ 				function() { return module; };
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
 /******/ 			__webpack_require__.d(getter, { a: getter });
 /******/ 			return getter;
 /******/ 		};
-/******/ 	}();
+/******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/define property getters */
-/******/ 	!function() {
+/******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 		__webpack_require__.d = (exports, definition) => {
 /******/ 			for(var key in definition) {
 /******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 				}
 /******/ 			}
 /******/ 		};
-/******/ 	}();
+/******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	!function() {
-/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
-/******/ 	}();
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
-/******/ 	!function() {
+/******/ 	(() => {
 /******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = function(exports) {
+/******/ 		__webpack_require__.r = (exports) => {
 /******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	}();
+/******/ 	})();
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
-!function() {
+(() => {
 "use strict";
 /*!***************************************************************************!*\
   !*** ./src/advanced-custom-fields-pro/assets/src/js/pro/acf-pro-input.js ***!
@@ -2125,7 +2110,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-}();
+})();
+
 /******/ })()
 ;
 //# sourceMappingURL=acf-pro-input.js.map

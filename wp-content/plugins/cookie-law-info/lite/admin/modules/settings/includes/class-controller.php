@@ -151,7 +151,7 @@ class Controller extends Cloud {
 				'description'     => $object->get_description(),
 				'slug'            => $object->get_slug(),
 				'isNecessaryLike' => 'necessary' === $object->get_slug() ? true : false,
-				'active'          => true,
+				'active'          => $object->get_visibility(),
 				'defaultConsent'  => array(
 					'gdpr' => $object->get_slug() === 'necessary' ? true : $object->get_prior_consent(),
 					'ccpa' => $object->get_sell_personal_data() === true && $object->get_slug() !== 'necessary' ? false : true,
@@ -343,11 +343,16 @@ class Controller extends Cloud {
 		$response_code = wp_remote_retrieve_response_code( $response );
 		if ( 200 === $response_code ) {
 			$response        = json_decode( wp_remote_retrieve_body( $response ), true );
+
+			$user            = isset( $response['user'] ) ? $response['user'] : array();
 			$plan            = isset( $response['websiteplan'] ) ? $response['websiteplan'] : array();
 			$features        = isset( $plan['features'] ) ? $plan['features'] : array();
 			$scan_timestamp  = isset( $response['last_scan_at'] ) ? strtotime( sanitize_text_field( $response['last_scan_at'] ) ) : false;
+			$scan_success_timestamp  = isset( $response['last_successful_scan_at'] ) ? strtotime( sanitize_text_field( $response['last_successful_scan_at'] ) ) : false;
 			$date            = isset( $scan_timestamp ) && is_int( $scan_timestamp ) ? gmdate( 'd M Y', $scan_timestamp ) : '';
 			$time            = isset( $scan_timestamp ) && is_int( $scan_timestamp ) ? gmdate( 'H:i:s', $scan_timestamp ) : '';
+			$success_date            = isset( $scan_success_timestamp ) && is_int( $scan_success_timestamp ) ? gmdate( 'd M Y', $scan_success_timestamp ) : '';
+			$success_time            = isset( $scan_success_timestamp ) && is_int( $scan_success_timestamp ) ? gmdate( 'H:i:s', $scan_success_timestamp ) : '';
 			$applicable_laws = isset( $response['applicableLaws'] ) ? $response['applicableLaws'] : array( 'gdpr' );
 			$applicable_laws = implode( ' & ', $applicable_laws );
 
@@ -358,6 +363,11 @@ class Controller extends Cloud {
 				'id'             => $this->get_website_id(),
 				'url'            => isset( $response['url'] ) ? esc_url_raw( $response['url'] ) : esc_url_raw( get_site_url() ),
 				'status'         => isset( $response['status'] ) ? sanitize_text_field( $response['status'] ) : '',
+				'banner_disabled_manually' => isset($response['banner_disabled_manually']) && true == $response['banner_disabled_manually'],
+				'user'           => array(
+					'name'        => isset( $user['name'] ) ? sanitize_text_field( $user['name'] ) : '',
+					'email'       => isset( $user['email'] ) ? sanitize_email( $user['email'] ) : '',
+				),
 				'plan'           => array(
 					'id'          => isset( $plan['id'] ) ? sanitize_text_field( $plan['id'] ) : '',
 					'slug'        => isset( $plan['slug'] ) ? sanitize_text_field( $plan['slug'] ) : '',
@@ -379,6 +389,8 @@ class Controller extends Cloud {
 				'banners'        => array(
 					'status' => isset( $response['banner_status'] ) && 1 === $response['banner_status'] ? true : false,
 					'laws'   => $applicable_laws,
+					'is_iab_enabled' => isset( $response['isIABEnabled'] ) && true === $response['isIABEnabled'],
+					'targetedLocation' => isset( $response['targetedLocation'] ) ? $response['targetedLocation'] : 'worldwide',
 				),
 				'consent_logs'   => array(
 					'status' => isset( $response['visitor_log'] ) && true === $response['visitor_log'] ? true : false,
@@ -389,6 +401,13 @@ class Controller extends Cloud {
 						'time' => $time,
 					),
 					'status' => isset( $response['last_scan_at'] ) && '' !== $response['last_scan_at'] ? true : false,
+				),
+				'success_scan'          => array(
+					'date'   => array(
+						'date' => $success_date,
+						'time' => $success_time,
+					),
+					'status' => isset( $response['last_successful_scan_at'] ) && '' !== $response['last_successful_scan_at'],
 				),
 				'languages'      => array(
 					'selected' => isset( $response['language']['preferred'] ) ? cky_sanitize_text( $response['language']['preferred'] ) : array(),

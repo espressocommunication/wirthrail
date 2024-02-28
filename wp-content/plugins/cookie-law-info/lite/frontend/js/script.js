@@ -134,6 +134,11 @@ function _ckyAttachListener(selector, fn) {
     const item = _ckyFindElement(selector);
     item && item.addEventListener("click", fn);
 }
+
+function _ckyClassAdd() {
+    return _ckyClassAction("add", ...arguments);
+}
+
 function _ckyClassRemove() {
     return _ckyClassAction("remove", ...arguments);
 }
@@ -225,6 +230,14 @@ function _ckyPreviewEnabled() {
     let params = (new URL(document.location)).searchParams;
     return params.get("cky_preview") && params.get("cky_preview") === 'true';
 }
+function _ckyToggleAriaExpandStatus(selector, forceDefault = null) {
+    const element = _ckyFindElement(selector);
+  
+    if (!element) return;
+    if (forceDefault) return element.setAttribute("aria-expanded", forceDefault);
+    const toggleFinalValue = element.getAttribute("aria-expanded") === "true" ? "false" : "true";
+    element.setAttribute("aria-expanded", toggleFinalValue);
+}
 /**
  * Sets the initial state of the plugin.
  */
@@ -264,15 +277,34 @@ function _ckyAddPositionClass() {
     if (!container) return false;
     const type = _ckyStore._bannerConfig.settings.type;
     let position = _ckyStore._bannerConfig.settings.position;
-    if (type === 'popup') {
+    let bannerType = type;
+    if (bannerType === 'popup') {
         position = 'center';
     }
-    const noticeClass = 'cky' + '-' + type + '-' + position;
+    bannerType = (_ckyGetPtype() === "pushdown") ? 'classic' : bannerType;
+    const noticeClass = `cky-${bannerType}-${position}`;
     container.classList.add(noticeClass);
     const revisitConsent = _ckyGetElementByTag('revisit-consent');
     if (!revisitConsent) return false;
     const revisitPosition = 'cky-revisit-' + _ckyStore._bannerConfig.config.revisitConsent.position;
     revisitConsent.classList.add(revisitPosition);
+}
+
+/**
+ * Add a class based on the preference center type and position. Eg: 'cky-sidebar-left'
+ * 
+ * @returns {boolean}
+ */
+function _ckyAddPreferenceCenterClass(){
+    const detail = _ckyGetLaw() === 'ccpa' ? _ckyGetElementByTag("optout-popup") : _ckyGetElementByTag("detail");
+    if (!detail) return false;
+    const modal = detail.closest('.cky-modal');
+    if (!modal) return false;
+    if (_ckyGetPtype() !== "pushdown" && _ckyGetPtype() !== "popup"){
+        const pType = _ckyStore._bannerConfig.settings.preferenceCenterType;
+        const modalClass = `cky-${pType}`;
+        modal.classList.add(modalClass);
+    }
 }
 
 /**
@@ -342,7 +374,6 @@ function _ckyRegisterListeners() {
     _ckyAttachListener("=detail-reject-button", _ckyAcceptReject("reject"));
     _ckyAttachListener("=revisit-consent", () => _revisitCkyConsent());
     _ckyAttachListener("=optout-close", () => _ckyHidePreferenceCenter());
-    _ckyAttachCategoryListeners();
 }
 
 function _ckyAttachCategoryListeners() {
@@ -350,21 +381,30 @@ function _ckyAttachCategoryListeners() {
     const categoryNames = _ckyStore._categories.map(({ slug }) => slug);
     categoryNames.map((category) => {
         const selector = `#ckyDetailCategory${category}`;
+        const accordionButtonSelector = `${selector}  .cky-accordion-btn`;
+        _ckyToggleAriaExpandStatus(accordionButtonSelector, "false");
         _ckyAttachListener(selector, ({ target: { id } }) => {
             if (
                 id === `ckySwitch${category}` ||
                 !_ckyClassToggle(selector, "cky-accordion-active", false)
-            )
+            ) {
+                _ckyToggleAriaExpandStatus(accordionButtonSelector, "false");
                 return;
+            }
+            _ckyToggleAriaExpandStatus(accordionButtonSelector, "true");
             categoryNames
                 .filter((categoryName) => categoryName !== category)
-                .map((filteredName) =>
+                .map(filteredName => {
                     _ckyClassRemove(
                         `#ckyDetailCategory${filteredName}`,
                         "cky-accordion-active",
                         false
-                    )
-                );
+                    );
+                    _ckyToggleAriaExpandStatus(
+                        `#ckyDetailCategory${filteredName} .cky-accordion-btn`,
+                        "false"
+                    );
+                });
         });
     });
 }
@@ -400,6 +440,12 @@ function _ckyGetLaw() {
 }
 function _ckyGetType() {
     return _ckyStore._bannerConfig.settings.type;
+}
+function _ckyGetPtype(){
+    if (_ckyGetType() === 'classic') {
+        return 'pushdown';
+    }
+    return _ckyStore._bannerConfig.settings.preferenceCenterType;
 }
 function _ckyGetBanner() {
     const notice = _ckyGetElementByTag('notice');
@@ -439,6 +485,9 @@ function _ckyHidePreferenceCenter() {
     if (_ckyGetType() !== 'classic') {
         _ckyHideOverLay();
         if (!ref._ckyGetFromStore("action")) _ckyShowBanner();
+    } else {
+        _ckyToggleAriaExpandStatus("=settings-button", "false");
+        _ckyClassRemove("=notice", "cky-consent-bar-expand");
     }
     if (ref._ckyGetFromStore("action")) _ckyShowRevisit();
     const origin = _ckyStore._preferenceOriginTag;
@@ -450,16 +499,20 @@ function _ckyShowPreferenceCenter() {
     if (_ckyGetType() !== 'classic') {
         _ckyShowOverLay();
         _ckyHideBanner();
+    } else {
+        _ckyToggleAriaExpandStatus("=settings-button");
+        _ckyClassAdd("=notice", "cky-consent-bar-expand");
     }
 }
 function _ckyTogglePreferenceCenter() {
     const element = _ckyGetPreferenceCenter();
     element && element.classList.toggle(_ckyGetPreferenceClass());
-    if (_ckyGetType() !== 'classic') _ckyToggleOverLay();
+    if (_ckyGetPtype() !== 'pushdown') _ckyToggleOverLay();
 }
 function _ckyGetPreferenceClass() {
-    return _ckyGetType() === 'classic' ? 'cky-consent-bar-expand' : 'cky-modal-open';
+    return _ckyGetPtype() === 'pushdown' ? 'cky-consent-bar-expand' : 'cky-modal-open';
 }
+
 function _ckyGetRevisit() {
     const revisit = _ckyGetElementByTag('revisit-consent');
     return revisit && revisit || false;
@@ -476,9 +529,53 @@ function _ckySetPreferenceAction(tagName = false) {
     _ckyStore._preferenceOriginTag = tagName;
     if (_ckyGetType() === 'classic') {
         _ckyTogglePreferenceCenter();
+        _ckyToggleAriaExpandStatus("=settings-button");    
     } else {
         _ckyShowPreferenceCenter();
     }
+}
+function _ckyGetFocusableElements(element) {
+    const wrapperElement = document.querySelector(`[data-cky-tag="${element}"]`);
+    if (!wrapperElement) return [];
+    const focussableElements = Array.from(
+        wrapperElement.querySelectorAll(
+            'a:not([disabled]), button:not([disabled]), [tabindex]:not([disabled]):not([tabindex="-1"])'
+        )
+    ).filter((element) => element.style.display !== "none");
+    if (focussableElements.length <= 0) return [];
+    return [
+        focussableElements[0],
+        focussableElements[focussableElements.length - 1],
+    ];
+}
+function _ckyLoopFocus() {
+    const activeLaw = _ckyGetLaw();
+    const bannerType = _ckyGetType();
+    if (bannerType === "classic") return;
+    if (bannerType === "popup") {
+        const [firstElementBanner, lastElementBanner] =
+        _ckyGetFocusableElements("notice");
+        _ckyAttachFocusLoop(firstElementBanner, lastElementBanner, true);
+        _ckyAttachFocusLoop(lastElementBanner, firstElementBanner);
+    }
+    const [firstElementPopup, lastElementPopup] = _ckyGetFocusableElements(
+        activeLaw === "ccpa" ? "optout-popup" : "detail"
+    );
+    _ckyAttachFocusLoop(firstElementPopup, lastElementPopup, true);
+    _ckyAttachFocusLoop(lastElementPopup, firstElementPopup);
+}
+function _ckyAttachFocusLoop(element, targetElement, isReverse = false) {
+    if (!element || !targetElement) return;
+    element.addEventListener("keydown", (event) => {
+        if (
+            event.which !== 9 ||
+            (isReverse && !event.shiftKey) ||
+            (!isReverse && event.shiftKey)
+        )
+        return;
+        event.preventDefault();
+        targetElement.focus();
+    });
 }
 
 /**
@@ -573,17 +670,23 @@ function _ckySetCategoryToggle(element, category = {}, revisit = false) {
     } else if (element.parentElement.getAttribute('data-cky-tag') === 'detail-category-preview-toggle') {
         _ckySetCategoryPreview(element, category);
     }
-
+    if(!category.isNecessary){
+        const categoryName = category.name;
+        const categoryTitle = document.querySelector(`[data-cky-tag="detail-category-title"][aria-label="${categoryName}"]`);
+        if(categoryTitle){
+            const toggleContainer = categoryTitle.closest('.cky-accordion-item');
+            const necessaryText = toggleContainer.querySelector('.cky-always-active');
+            necessaryText && necessaryText.remove();
+        }
+    }
 }
 function _ckySetCategoryPreferenceToggle(element, category) {
     let toggleContainer = element.closest('.cky-accordion-item');
     if (!toggleContainer) return;
     const toggleSwitch = toggleContainer.querySelector('.cky-switch');
-    const necessaryText = toggleContainer.querySelector('.cky-always-active');
     if (category.isNecessary) {
         toggleSwitch && toggleSwitch.remove();
     } else {
-        necessaryText && necessaryText.remove();
         if (_ckyGetType() === 'classic' && _ckyStore._bannerConfig.config.categoryPreview.status || (category.cookies && category.cookies.length === 0)) {
             toggleSwitch && toggleSwitch.remove();
         }
@@ -632,7 +735,9 @@ function _ckyRenderBanner() {
         "afterbegin",
         doc.body.innerHTML
     );
+    if (_ckyGetType() === "classic") _ckyToggleAriaExpandStatus("=settings-button", "false");
     _ckySetPreferenceCheckBoxStates();
+    _ckyAttachCategoryListeners();
     _ckyRegisterListeners();
     _ckySetCCPAOptions();
     _ckySetPlaceHolder();
@@ -640,7 +745,9 @@ function _ckyRenderBanner() {
     _ckyRemoveStyles();
     _ckyAddPositionClass();
     _ckyAddRtlClass();
-    _ckySetPoweredBy()
+    _ckySetPoweredBy();
+    _ckyLoopFocus();
+    _ckyAddPreferenceCenterClass();
 }
 
 /**
