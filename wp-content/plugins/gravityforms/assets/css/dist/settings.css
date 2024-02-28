@@ -6,7 +6,7 @@ Gravity Forms Settings Area Styles
 http: //www.gravityforms.com
 
 Gravity Forms is a Rocketgenius project
-copyright 2008-2021 Rocketgenius Inc.
+copyright 2008-2024 Rocketgenius Inc.
 http: //www.rocketgenius.com
 this may not be re-distributed without the
 express written permission of the author.
@@ -74,6 +74,10 @@ AND ANY CHANGES MADE HERE WILL BE OVERWRITTEN.
 		padding: 0 1rem;
 		text-align: left;
 	}
+
+.rtl .gform-settings__content table.gform_system_report td, .rtl .gform-settings__content table.gform_system_report th, .rtl .gform-settings__content table.plugins td, .rtl .gform-settings__content table.plugins th {
+			direction: ltr !important;
+		}
 
 .gform-settings__content table.gform_system_report td.plugin-title, .gform-settings__content table.plugins td.plugin-title {
 		vertical-align: top;
@@ -1024,8 +1028,6 @@ html[dir="rtl"] .gform-settings-field__toggleable-inputs {
 }
 
 .gform-settings__wrapper .button.primary {
-
-	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	background: #3e7da6;
 	border: 1px solid transparent;
