@@ -380,3 +380,23 @@ body, html {
     }
 }
 
+#main-menu > li.linkedin {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    
+    > a {
+        font-size: 0px;
+        color: transparent;
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background-image:url(../images/linkedin-icon.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        padding: 0;
+        position: absolute;
+        top: 5px;
+    }
+}
