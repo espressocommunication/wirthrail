@@ -380,23 +380,31 @@ body, html {
     }
 }
 
-#main-menu > li.linkedin {
+#main-menu {
     position: relative;
-    width: 25px;
-    height: 25px;
-    
-    > a {
-        font-size: 0px;
-        color: transparent;
-        display: inline-block;
+    padding-right: 45px;
+
+    > li.linkedin {
+        position: absolute;
         width: 25px;
         height: 25px;
-        background-image:url(../images/linkedin-icon.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        padding: 0;
-        position: absolute;
-        top: 5px;
+        right: 0;
+        top: 17px;
+
+        > a {
+            font-size: 0px;
+            color: transparent;
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-image:url(../images/linkedin-icon.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            padding: 0;
+            position: absolute;
+            top: 0;
+            margin: 0;
+        }
     }
 }
