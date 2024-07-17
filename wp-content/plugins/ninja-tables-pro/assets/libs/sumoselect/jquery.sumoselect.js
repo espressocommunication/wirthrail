@@ -22,12 +22,12 @@
 
     'namespace sumo';
     $.fn.SumoSelect = function (options) {
-
+        const i18n = window.ninja_footables.i18n
         // This is the easiest way to have default options.
         var settings = $.extend({
             placeholder: 'Select Here',   // Dont change it here.
-            csvDispCount: 3,              // display no. of items in multiselect. 0 to display all.
-            captionFormat: '{0} Selected', // format of caption text. you can set your locale.
+            csvDispCount: 2,              // display no. of items in multiselect. 0 to display all.
+            captionFormat: `{0} ${i18n.caption_format}`, // format of caption text. you can set your locale.
             captionFormatAllSelected: '{0} all selected!', // format of caption text when all elements are selected. set null to use captionFormat. It will not work if there are disabled elements in select.
             floatWidth: 400,              // Screen width of device at which the list is rendered in floating popup fashion.
             forceCustomRendering: true,  // force the custom modal on all devices below floatWidth resolution.
@@ -46,9 +46,11 @@
             },
             noMatch: 'No matches for "{0}"',
             prefix: '',                   // some prefix usually the field name. eg. '<b>Hello</b>'
-            locale: ['OK', 'Cancel', 'Select All'],  // all text that is used. don't change the index.
+            locale: ['OK', 'Cancel', 'Select All', i18n.clear_all],  // all text that is used. don't change the index.
             up: false,                    // set true to open upside.
-            showTitle: true               // set to false to prevent title (tooltip) from appearing
+            showTitle: true,               // set to false to prevent title (tooltip) from appearing
+            clearAll: true,              // im multi select - clear all checked options
+            closeAfterClearAll: true,    // im multi select - close select after clear
         }, options);
 
         var ret = this.each(function () {
@@ -119,6 +121,7 @@
                     O.optDiv.append(O.ul);
 
                     // Select all functionality
+                    if (settings.clearAll && O.is_multi) O.ClearAll();
                     if (settings.selectAll && O.is_multi) O.SelAll();
 
                     // search functionality
@@ -272,6 +275,23 @@
                     O.optDiv.prepend(O.selAll);
                 },
 
+                ClearAll: function () {
+                    const O = this;
+                    if (!O.is_multi) return;
+                    O.selAll = $('<p class="reset-all"><span><i></i></span><label></label></p>');
+                    [, , , O.selAll.find('label')[0].innerText] = settings.locale;
+                    O.optDiv.addClass('resetAll');
+                    O.selAll.on('click', () => {
+                        O.selAll.removeClass('selected');
+                        O.toggSelAll(false, 1);
+                        if (settings.closeAfterClearAll) {
+                            O.hideOpts();
+                        }
+                    });
+
+                    O.optDiv.prepend(O.selAll);
+                },
+
                 // search module (can be removed if not required.)
                 Search: function () {
                     var O = this,
@@ -344,7 +364,8 @@
                     if (O.is_floating) {
                         var H = O.optDiv.children('ul').outerHeight() + 2;  // +2 is clear fix
                         if (O.is_multi) H = H + parseInt(O.optDiv.css('padding-bottom'));
-                        O.optDiv.css('height', H);
+                        const extraHeight = 25; // extra height clearAll on mobile devices
+                        O.optDiv.css('height', H + extraHeight);
                         $('body').addClass('sumoStopScroll');
                     }
 
@@ -511,9 +532,11 @@
                 // fixed some variables that were not explicitly typed (michc)
                 setText: function () {
                     var O = this;
+                    let lengthSelected = 0;
                     O.placeholder = "";
                     if (O.is_multi) {
                         var sels = O.E.find(':selected').not(':disabled'); //selected options.
+                        lengthSelected = sels.length;
 
                         for (var i = 0; i < sels.length; i++) {
                             if (i + 1 >= settings.csvDispCount && settings.csvDispCount) {
@@ -531,6 +554,7 @@
                     }
                     else {
                         O.placeholder = O.E.find(':selected').not(':disabled').text();
+                        lengthSelected = option.length;
                     }
 
                     var is_placeholder = false;
@@ -543,6 +567,9 @@
                         if (!O.placeholder)                  //if placeholder is there then set it
                             O.placeholder = O.E.find('option:disabled:selected').text();
                     }
+
+                    O.select.attr('selected-count', lengthSelected);
+                    O.select.attr('is-selected', lengthSelected ? 'true' : 'false');
 
                     O.placeholder = O.placeholder ? (settings.prefix + ' ' + O.placeholder) : settings.placeholder
 
