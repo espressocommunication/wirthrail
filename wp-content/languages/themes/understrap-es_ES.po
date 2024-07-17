@@ -2,26 +2,50 @@
 # This file is distributed under the same license as the Themes - Understrap package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-11-20 16:01:13+0000\n"
+"PO-Revision-Date: 2024-04-03 05:30:32+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/4.0.0-alpha.3\n"
+"X-Generator: GlotPress/4.0.0\n"
 "Language: es\n"
 "Project-Id-Version: Themes - Understrap\n"
 
 #. Description of the theme
+#: style.css
 #, gp-priority: high
 msgid "The renowned WordPress starter theme framework that combined Underscores and Bootstrap. Trusted by more than 100,000 developers for building handcrafted, custom WordPress sites."
 msgstr "El famoso framework de tema  de inicio para WordPress que combina Underscores y Bootstrap. Con la confianza de más de 100.000 desarrolladores para crear sitios WordPress hechos a mano y personalizados."
 
 #. Theme Name of the theme
+#: style.css
 #, gp-priority: high
 msgid "Understrap"
 msgstr "Understrap"
 
-#: woocommerce/myaccount/my-address.php:61
+#: woocommerce/order/order-again.php:22
+msgid "Order again"
+msgstr "Pedirlo de nuevo"
+
+#: woocommerce/checkout/form-verify-email.php:56
+msgid "Verify"
+msgstr "Verificar"
+
+#. translators: 1: opening login link 2: closing login link
+#: woocommerce/checkout/form-verify-email.php:40
+msgid "To view this page, you must either %1$slogin%2$s or verify the email address associated with the order."
+msgstr "Para ver esta página debes, o %1$sacceder%2$s o verificar la dirección de correo electrónico asociada con el pedido."
+
+#: woocommerce/checkout/form-verify-email.php:33
+msgid "We were unable to verify the email address you provided. Please try again."
+msgstr "No hemos podido verificar la dirección de correo electrónico que has facilitado. Por favor, inténtalo de nuevo."
+
+#. translators: %s is the product name
+#: woocommerce/cart/cart.php:66
+msgid "Remove %s from cart"
+msgstr "Quitar %s del carrito"
+
+#: woocommerce/myaccount/my-address.php:63
 msgid "Add"
 msgstr "Añadir"
 
@@ -89,23 +113,23 @@ msgid "Bootstrap 4"
 msgstr "Bootstrap 4"
 
 #: inc/customizer.php:90
-msgid "Choose between Bootstrap 4 or Bootstrap 5"
-msgstr "Elige entre Bootstrap 4 o Bootstrap 5"
+msgid "Choose between Bootstrap 4 and Bootstrap 5"
+msgstr "Elige entre Bootstrap 4 y Bootstrap 5"
 
 #: inc/customizer.php:89
 msgid "Bootstrap Version"
 msgstr "Versión de Bootstrap"
 
-#: woocommerce/myaccount/downloads.php:40 woocommerce/myaccount/orders.php:100
+#: woocommerce/myaccount/downloads.php:34 woocommerce/myaccount/orders.php:100
 msgid "Browse products"
 msgstr "Explorar los productos"
 
-#: sidebar-templates/sidebar-hero.php:36
+#: sidebar-templates/sidebar-hero.php:38
 msgctxt "carousel control"
 msgid "Next"
 msgstr "Siguiente"
 
-#: sidebar-templates/sidebar-hero.php:28
+#: sidebar-templates/sidebar-hero.php:30
 msgctxt "carousel control"
 msgid "Previous"
 msgstr "Anterior"
@@ -189,27 +213,27 @@ msgctxt "post author"
 msgid "Posted by"
 msgstr "Publicado por"
 
-#: inc/widgets.php:340
+#: inc/widgets.php:346
 msgid "Full sized footer widget with dynamic grid"
 msgstr "Widget del pie de página de tamaño completo con cuadrícula dinámica"
 
-#: inc/widgets.php:328
+#: inc/widgets.php:333
 msgid "Full top widget with dynamic grid"
 msgstr "Widget superior completo con cuadrícula dinámica"
 
-#: inc/widgets.php:316
+#: inc/widgets.php:320
 msgid "Full size canvas hero area for Bootstrap and other custom HTML markup"
 msgstr "Área de lienzo Hero de tamaño completo para Bootstrap y otro marcado HTML personalizado"
 
-#: inc/widgets.php:304
+#: inc/widgets.php:307
 msgid "Hero slider area. Place two or more widgets here and they will slide!"
 msgstr "Área de carrusel a pantalla completa. ¡Coloca aquí dos o más widgets y se deslizarán!"
 
-#: inc/widgets.php:292
+#: inc/widgets.php:294
 msgid "Left sidebar widget area"
 msgstr "Área de widgets de la barra lateral izquieda"
 
-#: inc/widgets.php:280
+#: inc/widgets.php:281
 msgid "Right sidebar widget area"
 msgstr "Área de widgets de la barra lateral derecha"
 
@@ -234,11 +258,13 @@ msgstr "Nombre a mostrar"
 msgid "If you have a coupon code, please apply it below."
 msgstr "Si tienes un código de cupón, por favor, aplícalo a continuación."
 
-#: inc/widgets.php:326
+#. translators: Widget area title
+#: inc/widgets.php:331
 msgid "Top Full"
 msgstr "Superior completo"
 
-#: inc/widgets.php:314
+#. translators: Widget area title
+#: inc/widgets.php:318
 msgid "Hero Canvas"
 msgstr "Lienzo a pantalla completa"
 
@@ -270,15 +296,15 @@ msgid_plural "%1$s for %2$s items"
 msgstr[0] "%1$s para %2$s artículo"
 msgstr[1] "%1$s para %2$s artículos"
 
-#: woocommerce/myaccount/my-address.php:65
+#: woocommerce/myaccount/my-address.php:67
 msgid "You have not set up this type of address yet."
 msgstr "Aún no has configurado este tipo de dirección."
 
-#: woocommerce/myaccount/my-address.php:47
+#: woocommerce/myaccount/my-address.php:46
 msgid "The following addresses will be used on the checkout page by default."
 msgstr "Las siguientes direcciones serán usadas por defecto en la página de pago."
 
-#: woocommerce/cart/cart.php:143 woocommerce/checkout/form-coupon.php:39
+#: woocommerce/cart/cart.php:162 woocommerce/checkout/form-coupon.php:39
 msgid "Apply coupon"
 msgstr "Aplicar el cupón"
 
@@ -326,7 +352,7 @@ msgstr "Diseño de la barra lateral izquierda"
 msgid "Left and Right Sidebar Layout"
 msgstr "Diseño de las barras laterales izquierda y derecha"
 
-#: woocommerce/myaccount/orders.php:101
+#: woocommerce/myaccount/orders.php:100
 msgid "No order has been made yet."
 msgstr "No se ha hecho ningún pedido todavía."
 
@@ -401,36 +427,37 @@ msgid "Save address"
 msgstr "Guardar la dirección"
 
 #: woocommerce/myaccount/form-edit-address.php:20
-#: woocommerce/myaccount/my-address.php:28
+#: woocommerce/myaccount/my-address.php:27
 msgid "Shipping address"
 msgstr "Dirección de envío"
 
 #: woocommerce/myaccount/form-edit-address.php:20
-#: woocommerce/myaccount/my-address.php:27
-#: woocommerce/myaccount/my-address.php:36
+#: woocommerce/myaccount/my-address.php:26
+#: woocommerce/myaccount/my-address.php:35
 msgid "Billing address"
 msgstr "Dirección de facturación"
 
-#: woocommerce/myaccount/form-edit-account.php:69
+#: woocommerce/myaccount/form-edit-account.php:85
 msgid "Save changes"
 msgstr "Guardar los cambios"
 
-#: woocommerce/myaccount/form-edit-account.php:59
+#: woocommerce/myaccount/form-edit-account.php:68
 msgid "Confirm new password"
 msgstr "Confirmar la nueva contraseña"
 
-#: woocommerce/myaccount/form-edit-account.php:55
+#: woocommerce/myaccount/form-edit-account.php:64
 msgid "New password (leave blank to leave unchanged)"
 msgstr "Nueva contraseña (déjalo en blanco para no cambiarla)"
 
-#: woocommerce/myaccount/form-edit-account.php:51
+#: woocommerce/myaccount/form-edit-account.php:60
 msgid "Current password (leave blank to leave unchanged)"
 msgstr "Contraseña actual (déjalo en blanco para no cambiarla)"
 
-#: woocommerce/myaccount/form-edit-account.php:48
+#: woocommerce/myaccount/form-edit-account.php:57
 msgid "Password change"
 msgstr "Cambio de contraseña"
 
+#: woocommerce/checkout/form-verify-email.php:49
 #: woocommerce/myaccount/form-edit-account.php:43
 #: woocommerce/myaccount/form-login.php:85
 msgid "Email address"
@@ -444,7 +471,7 @@ msgstr "Apellidos"
 msgid "First name"
 msgstr "Nombre"
 
-#: woocommerce/myaccount/downloads.php:42
+#: woocommerce/myaccount/downloads.php:34
 msgid "No downloads available yet."
 msgstr "No hay descargas disponibles todavía."
 
@@ -470,12 +497,12 @@ msgstr "Contraseña"
 msgid "Username or email"
 msgstr "Nombre de usuario o correo electrónico"
 
-#: woocommerce/checkout/payment.php:44
+#: woocommerce/checkout/payment.php:45
 msgid "Update totals"
 msgstr "Actualizar los totales"
 
 #. translators: $1 and $2 opening and closing emphasis tags respectively
-#: woocommerce/checkout/payment.php:42
+#: woocommerce/checkout/payment.php:43
 msgid "Since your browser does not support JavaScript, or it is disabled, please ensure you click the %1$sUpdate Totals%2$s button before placing your order. You may be charged more than the amount stated above if you fail to do so."
 msgstr "Debido a que tu navegador no es compatible con JavaScript o lo tiene desactivado, por favor, asegúrate de hacer clic en el botón %1$sActualizar los totales%2$s antes de realizar tu pedido. De no hacerlo, se te podría cobrar más de la cantidad indicada arriba."
 
@@ -484,10 +511,10 @@ msgid "Please fill in your details above to see available payment methods."
 msgstr "Por favor, rellena tus datos arriba para ver los métodos de pago disponibles."
 
 #: woocommerce/checkout/payment.php:33
-msgid "Sorry, it seems that there are no available payment methods for your state. Please contact us if you require assistance or wish to make alternate arrangements."
-msgstr "Lo siento, parece que no hay métodos de pago disponibles para tu provincia. Por favor, contacta con nosotros si necesitas ayuda o deseas establecer métodos alternativos."
+msgid "Sorry, it seems that there are no available payment methods. Please contact us if you require assistance or wish to make alternate arrangements."
+msgstr "Lo siento, parece que no hay métodos de pago disponibles. Por favor, contacta con nosotros si necesitas ayuda o deseas establecer métodos alternativos."
 
-#: woocommerce/checkout/form-pay.php:79
+#: woocommerce/checkout/form-pay.php:89
 msgid "Sorry, it seems that there are no available payment methods for your location. Please contact us if you require assistance or wish to make alternate arrangements."
 msgstr "Lo siento, parece que no hay métodos de pago disponibles para tu ubicación. Por favor, contacta con nosotros si necesitas ayuda o deseas establecer métodos alternativos."
 
@@ -511,43 +538,39 @@ msgstr "¿Tienes un cupón?"
 msgid "Proceed to checkout"
 msgstr "Proceder al pago"
 
-#: woocommerce/cart/cart.php:33 woocommerce/cart/cart.php:125
+#: woocommerce/cart/cart.php:33 woocommerce/cart/cart.php:144
 msgid "Subtotal"
 msgstr "Subtotal"
 
-#: woocommerce/cart/cart.php:148
+#: woocommerce/cart/cart.php:167
 msgid "Update cart"
 msgstr "Actualizar el carrito"
 
-#: woocommerce/cart/cart.php:143 woocommerce/checkout/form-coupon.php:35
+#: woocommerce/cart/cart.php:162 woocommerce/checkout/form-coupon.php:35
 msgid "Coupon code"
 msgstr "Código del cupón"
 
-#: woocommerce/cart/cart.php:143 woocommerce/checkout/form-coupon.php:34
+#: woocommerce/cart/cart.php:162 woocommerce/checkout/form-coupon.php:34
 msgid "Coupon:"
 msgstr "Cupón:"
 
-#: woocommerce/cart/cart.php:92
+#: woocommerce/cart/cart.php:107
 msgid "Available on backorder"
 msgstr "Disponible para reservar"
-
-#: woocommerce/cart/cart.php:56
-msgid "Remove this item"
-msgstr "Eliminar este artículo"
 
 #: woocommerce/myaccount/my-orders.php:17
 msgid "Total"
 msgstr "Total"
 
-#: woocommerce/cart/cart.php:32 woocommerce/cart/cart.php:103
+#: woocommerce/cart/cart.php:32 woocommerce/cart/cart.php:118
 msgid "Quantity"
 msgstr "Cantidad"
 
-#: woocommerce/cart/cart.php:31 woocommerce/cart/cart.php:97
+#: woocommerce/cart/cart.php:31 woocommerce/cart/cart.php:112
 msgid "Price"
 msgstr "Precio"
 
-#: woocommerce/cart/cart.php:30 woocommerce/cart/cart.php:77
+#: woocommerce/cart/cart.php:30 woocommerce/cart/cart.php:87
 #: woocommerce/checkout/form-pay.php:27
 msgid "Product"
 msgstr "Producto"
@@ -556,11 +579,13 @@ msgstr "Producto"
 msgid "Return to shop"
 msgstr "Volver a la tienda"
 
-#: inc/widgets.php:290
+#. translators: Widget area title
+#: inc/widgets.php:292
 msgid "Left Sidebar"
 msgstr "Barra lateral izquierda"
 
-#: inc/widgets.php:278
+#. translators: Widget area title
+#: inc/widgets.php:279
 msgid "Right Sidebar"
 msgstr "Barra lateral derecha"
 
@@ -660,15 +685,17 @@ msgstr "¿Preparado para publicar tu primera entrada? <a href=\"%1$s\">Empieza a
 msgid "Nothing Found"
 msgstr "No se ha encontrado nada"
 
-#: inc/widgets.php:338
+#. translators: Widget area title
+#: inc/widgets.php:344
 msgid "Footer Full"
 msgstr "Pie de página completo"
 
-#: inc/widgets.php:302
+#. translators: Widget area title
+#: inc/widgets.php:305
 msgid "Hero Slider"
 msgstr "Carrusel a pantalla completa"
 
-#: woocommerce/myaccount/my-address.php:61
+#: woocommerce/myaccount/my-address.php:63
 msgid "Edit"
 msgstr "Editar"
 
@@ -678,7 +705,7 @@ msgid "Posted in %s"
 msgstr "Publicado en %s"
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:371
+#: inc/template-tags.php:385
 msgid ", "
 msgstr ", "
 
@@ -704,7 +731,7 @@ msgstr "Menú principal"
 msgid "Website"
 msgstr "Web"
 
-#: header.php:32
+#: header.php:33
 msgid "Skip to content"
 msgstr "Saltar al contenido"
 
@@ -760,17 +787,19 @@ msgid "Oops! That page can&rsquo;t be found."
 msgstr "¡Vaya! No se ha podido encontrar esa página."
 
 #. Author URI of the theme
+#: style.css
 #, gp-priority: low
 msgid "https://howarddc.com"
 msgstr "https://howarddc.com"
 
 #. Author of the theme
+#: style.css
 #, gp-priority: low
 msgid "Howard Development &amp; Consulting"
 msgstr "Howard Development &amp; Consulting"
 
 #. Theme URI of the theme
-#: inc/hooks.php:40
+#: style.css inc/hooks.php:40
 #, gp-priority: low
 msgid "https://understrap.com"
 msgstr "https://understrap.com"
